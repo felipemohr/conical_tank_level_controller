@@ -2,13 +2,13 @@
 
 PIDController::PIDController()
 {
-  this->__ticker.attach(PIDController::millisTicker, 0.001);
+  this->_ticker.attach(PIDController::millisTicker, 0.001);
 }
 
 PIDController::PIDController(float kp, float ki, float kd)
-  : __kp(kp), __ki(ki), __kd(kd)
+  : _kp(kp), _ki(ki), _kd(kd)
 {
-  this->__ticker.attach(PIDController::millisTicker, 0.001);
+  this->_ticker.attach(PIDController::millisTicker, 0.001);
 }
 
 PIDController::~PIDController()
@@ -17,51 +17,51 @@ PIDController::~PIDController()
 
 void PIDController::millisTicker()
 {
-  this->__millis++;
+  this->_millis++;
 }
 
 void PIDController::setKPID(float kp, float ki, float kd)
 {
-  this->__kp = kp;
-  this->__ki = ki;
-  this->__kd = kd;
+  this->_kp = kp;
+  this->_ki = ki;
+  this->_kd = kd;
 }
 
 void PIDController::setKp(float kp)
 {
-  this->__kp = kp;
+  this->_kp = kp;
 }
 
 void PIDController::setKi(float ki)
 {
-  this->__ki = ki;
+  this->_ki = ki;
 }
 
 void PIDController::setKd(float kd)
 {
-  this->__kd = kd;
+  this->_kd = kd;
 }
 
 void PIDController::setSetpoint(float setpoint)
 {
-  this->__setpoint = setpoint;
+  this->_setpoint = setpoint;
 }
 
 float PIDController::processPID(float curr_point)
 {
-  this->__curr_time = this->__millis / 1000;
-  this->__delta_time = this->__curr_time - this->__last_time;
+  this->_curr_time = this->_millis / 1000;
+  this->_delta_time = this->_curr_time - this->_last_time;
 
-  this->__error = curr_point - this->__setpoint;
-  this->__sum_error += this->__error;
-  this->__delta_error = this->__error - this->__last_error;
+  this->_error = curr_point - this->_setpoint;
+  this->_sum_error  += this->_error;
+  this->_delta_error = this->_error - this->_last_error;
 
-  this->__pid_result = this->__kp * this->__error
-                     + this->__ki * this->__sum_error * this->__curr_time
-                     + this->__kd * this->__delta_error / this->__delta_time;
+  this->_pid_result  = this->_kp * this->_error
+                     + this->_ki * this->_sum_error * this->_curr_time
+                     + this->_kd * this->_delta_error / this->_delta_time;
 
-  this->__last_time = this->__curr_time;
-  this->__last_error = this->__error;
+  this->_last_time = this->_curr_time;
+  this->_last_error = this->_error;
 
-  return this->__pid_result;
+  return this->_pid_result;
 }

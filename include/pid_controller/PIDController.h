@@ -3,24 +3,24 @@
 class PIDController
 {
 private:
-  float __kp = 1.0;
-  float __ki = 0.0;
-  float __kd = 0.0;
+  float _kp = 1.0;
+  float _ki = 0.0;
+  float _kd = 0.0;
 
-  float __error;
-  float __sum_error = 0.0;
-  float __last_error = 0.0;
-  float __delta_error;
+  float _error;
+  float _sum_error = 0.0;
+  float _last_error = 0.0;
+  float _delta_error;
   
-  float __last_time = 0.0;
-  float __curr_time;
-  float __delta_time;
+  float _last_time = 0.0;
+  float _curr_time;
+  float _delta_time;
 
-  float __setpoint;
-  float __pid_result;
+  float _setpoint;
+  float _pid_result;
   
-  int __millis = 0;
-  Ticker __ticker;
+  int _millis = 0;
+  Ticker _ticker;
 
   void millisTicker();
 
