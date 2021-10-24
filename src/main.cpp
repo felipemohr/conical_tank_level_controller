@@ -13,7 +13,8 @@ void pid_fall();
 void level_rise();
 
 void set_pid_state();
-void set_next_state();
+void set_next_pid_state();
+void set_level_state();
 void set_state();
 void set_pid();
 
@@ -46,7 +47,7 @@ int main() {
 
 void pid_rise()
 {
-  timeout.attach(&set_next_state, debounce_time);
+  timeout.attach(&set_next_pid_state, debounce_time);
 }
 
 void pid_fall()
@@ -57,15 +58,29 @@ void pid_fall()
 void set_state()
 {
   state = next_state;
-  next_state = OPERATION;
   pc.printf("State: %c\n", states[state]);
 }
 
 void level_rise()
 {
+  timeout.attach(&set_level_state, debounce_time);
 }
 
-void set_next_state()
+void set_level_state()
+{
+  if(state == OPERATION)
+  {
+    next_state = SET_LEVEL;
+    set_state();
+  }
+  else if(state == SET_LEVEL)
+  {
+    next_state = OPERATION;
+    set_state();
+  }
+}
+
+void set_next_pid_state()
 {
   if (state == OPERATION)
   {
@@ -76,15 +91,18 @@ void set_next_state()
   {
     next_state = SET_KI;
     pc.printf("next state SET_KI\n");
+    return;
   }
   else if (state == SET_KI)
   { 
     next_state = SET_KD;
-    pc.printf("next state SET_KI\n");
+    pc.printf("next state SET_KD\n");
+    return;
   }
   else if (state == SET_KD){
     next_state = OPERATION;
     pc.printf("next state Operation\n");
+    return;
   }
   timeout.attach(&set_pid_state, 3.0);
 }
