@@ -1,126 +1,93 @@
 #include "mbed.h"
-// #include "TextLCD.h"
+#include "hcsr04.h"
+#include "fir_coeffs.h"
 
-InterruptIn pid_button(PB_10);
-InterruptIn level_button(PB_11);
+#include <stdint.h>
 
-Timeout timeout;
+#define SAMPLING_FREQUENCY 100
 
-Serial pc(PA_9, PA_10);
-
-void pid_rise();
-void pid_fall();
-void level_rise();
-
-void set_pid_state();
-void set_next_pid_state();
-void set_level_state();
-void set_state();
-void set_pid();
-
-static float debounce_time = 0.5;
-
-enum
+struct FIRFilter
 {
-  INIT, OPERATION, SET_LEVEL,
-  SET_KP, SET_KI, SET_KD
+  float   buf[FILTER_NUM_COEFFS];
+  uint8_t bufIndex;
+
+  float out;
 };
 
-char states[6] = {'0', 'o', 'l', 'p', 'i', 'd'};
-int state = INIT;
-int next_state = OPERATION;
+void FIRFilter_Init(FIRFilter *fir);
+float FIRFilter_Update(FIRFilter *fir, float inp);
+
+HCSR04 usensor(PB_11, PB_10);
+Serial pc(PA_9, PA_10, 9600);
+
+Ticker sensor_timeout;
+void readUltrassonic();
+
+bool print_flag = false;
 
 
-int main() {
+void FIRFilter_Init(FIRFilter *fir)
+{
+  for (uint8_t n=0; n<FILTER_NUM_COEFFS; n++)
+    fir->buf[n] = 0.0f;
+  fir->bufIndex = 0;
+  fir->out = 0.0f;
+}
 
-  state = OPERATION;
 
-  pid_button.rise(&pid_rise);
-  pid_button.fall(&pid_fall);
-  level_button.rise(&level_rise);
+float FIRFilter_Update(FIRFilter *fir, float inp)
+{
+  fir->buf[fir->bufIndex] = inp;
   
+  fir->bufIndex++;
+  if(fir->bufIndex == FILTER_NUM_COEFFS)
+    fir->bufIndex = 0;
+
+  fir->out = 0.0f;
+
+  uint8_t sumIndex = fir->bufIndex;
+
+  for (uint8_t n=0; n<FILTER_NUM_COEFFS; n++)
+  {
+    if (sumIndex > 0) sumIndex--;
+    else sumIndex = FILTER_NUM_COEFFS - 1;
+    fir->out += FIR_COEFFS[n] * fir->buf[sumIndex];
+  }
+
+  return fir->out;
+
+}
+
+
+FIRFilter lpf;
+float dist_raw;
+float dist_filtered;
+
+
+
+int main()
+{
+  FIRFilter_Init(&lpf);
+
+  sensor_timeout.attach(&readUltrassonic, 0.01);
+
   while(1)
   {
-
+    if(print_flag)
+    {
+      pc.printf("%.2f\n", dist_raw);
+      print_flag = false;
+    }
+    wait_ms(1);
   }
+
 }
 
-void pid_rise()
-{
-  timeout.attach(&set_next_pid_state, debounce_time);
-}
 
-void pid_fall()
+void readUltrassonic()
 {
-  timeout.attach(&set_state, debounce_time);
-}
-
-void set_state()
-{
-  state = next_state;
-  pc.printf("State: %c\n", states[state]);
-}
-
-void level_rise()
-{
-  timeout.attach(&set_level_state, debounce_time);
-}
-
-void set_level_state()
-{
-  if(state == OPERATION)
-  {
-    next_state = SET_LEVEL;
-    set_state();
-  }
-  else if(state == SET_LEVEL)
-  {
-    next_state = OPERATION;
-    set_state();
-  }
-}
-
-void set_next_pid_state()
-{
-  if (state == OPERATION)
-  {
-    next_state = SET_KP;
-    pc.printf("next state SET_KP\n");
-  } 
-  else if (state == SET_KP)
-  {
-    next_state = SET_KI;
-    pc.printf("next state SET_KI\n");
-    return;
-  }
-  else if (state == SET_KI)
-  { 
-    next_state = SET_KD;
-    pc.printf("next state SET_KD\n");
-    return;
-  }
-  else if (state == SET_KD){
-    next_state = OPERATION;
-    pc.printf("next state Operation\n");
-    return;
-  }
-  timeout.attach(&set_pid_state, 3.0);
-}
-
-void set_pid_state()
-{
-  if(next_state == SET_KP)
-  {
-    next_state = SET_KI;
-    pc.printf("NEXT STATE SET_KI\n");
-    timeout.attach(&set_pid_state, 3.0);
-    return;
-  }
-  else if(next_state == SET_KI)
-  {
-    next_state = SET_KD;
-    pc.printf("NEXT STATE SET_KD\n");
-    return;
-  }
-
+  usensor.start();
+  dist_raw = min(usensor.get_dist_cm(), 40.0f);
+  dist_filtered = FIRFilter_Update(&lpf, dist_raw);
+  print_flag = true;
 }
