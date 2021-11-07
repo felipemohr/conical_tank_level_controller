@@ -4,7 +4,7 @@
 
 #include <stdint.h>
 
-#define SAMPLING_FREQUENCY 100
+#define SAMPLING_FREQUENCY 100.0
 
 struct FIRFilter
 {
@@ -18,9 +18,9 @@ void FIRFilter_Init(FIRFilter *fir);
 float FIRFilter_Update(FIRFilter *fir, float inp);
 
 HCSR04 usensor(PB_11, PB_10);
-Serial pc(PA_9, PA_10, 9600);
+Serial pc(PA_9, PA_10, 19200);
 
-Ticker sensor_timeout;
+Ticker sensor_ticker;
 void readUltrassonic();
 
 bool print_flag = false;
@@ -69,13 +69,13 @@ int main()
 {
   FIRFilter_Init(&lpf);
 
-  sensor_timeout.attach(&readUltrassonic, 0.01);
+  sensor_ticker.attach(&readUltrassonic, 1/SAMPLING_FREQUENCY);
 
   while(1)
   {
     if(print_flag)
     {
-      pc.printf("%.2f\n", dist_raw);
+      pc.printf("%.2f/%.2f\n", dist_raw, dist_filtered);
       print_flag = false;
     }
     wait_ms(1);

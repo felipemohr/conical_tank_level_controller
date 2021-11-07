@@ -24,15 +24,21 @@ def compute_and_plot_fft(signal, Fs):
   X_mag_plot = 2 * X_mag[0:int(N/2 + 1)]  # Magnitude da transformada para plotagem
   X_mag_plot[0] = X_mag_plot[0]/2         # A componente DC não deve ser multiplicada
 
+  plt.rcParams.update({'font.size': 20})
+
   plt.figure(1, figsize=(20,10))
   plt.plot(t, signal)
-  plt.xlabel("time (s)")
+  plt.title("Time Domain Signal", fontweight="bold")
+  plt.xlabel("Time (s)")
+  plt.ylabel("Amplitude")
   plt.xlim(0, t[-1])
   plt.grid()
 
   plt.figure(2, figsize=(20,10))
   plt.plot(freq_plot, X_mag_plot)
-  plt.xlabel("frequency (Hz)")
+  plt.title("Frequency Domain Signal", fontweight="bold")
+  plt.xlabel("Frequency (Hz)")
+  plt.ylabel("Amplitude")
   plt.xlim(0, freq_plot[-1])
   plt.grid()
   
