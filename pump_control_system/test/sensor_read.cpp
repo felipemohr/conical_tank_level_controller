@@ -1,7 +1,6 @@
 #include "mbed.h"
 #include "hcsr04.h"
 #include "fir_coeffs.h"
-#include "TextLCD.h"
 
 #include <stdint.h>
 
@@ -18,11 +17,13 @@ struct FIRFilter
 void FIRFilter_Init(FIRFilter *fir);
 float FIRFilter_Update(FIRFilter *fir, float inp);
 
-HCSR04 usensor(PB_10, PB_11);
-TextLCD lcd(PA_8, PA_9, PA_10, PA_11, PA_12, PA_15);
+HCSR04 usensor(PB_11, PB_10);
+Serial pc(PA_9, PA_10, 19200);
 
 Ticker sensor_ticker;
 void readUltrassonic();
+
+bool print_flag = false;
 
 
 void FIRFilter_Init(FIRFilter *fir)
@@ -72,13 +73,12 @@ int main()
 
   while(1)
   {
-
-    lcd.cls();
-    lcd.printf("Raw: %.2f cm", dist_raw);
-    lcd.locate(0,1);
-    lcd.printf("Filt: %.2f cm", dist_filtered);
-    wait_ms(1000);
-
+    if(print_flag)
+    {
+      pc.printf("%.2f/%.2f\n", dist_raw, dist_filtered);
+      print_flag = false;
+    }
+    wait_ms(1);
   }
 
 }
@@ -89,4 +89,5 @@ void readUltrassonic()
   usensor.start();
   dist_raw = min(usensor.get_dist_cm(), 40.0f);
   dist_filtered = FIRFilter_Update(&lpf, dist_raw);
+  print_flag = true;
 }
