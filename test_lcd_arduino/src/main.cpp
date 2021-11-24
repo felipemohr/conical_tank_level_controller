@@ -1,27 +1,34 @@
-//YWROBOT
-//Compatible with the Arduino IDE 1.0
-//Library version:1.1
-#include <Arduino.h>
-#include <LiquidCrystal_I2C.h>
+#include "Arduino.h"
 
-LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+float flow_frequency = 0.0f; // Measures flow sensor pulses
+float l_hour; // Calculated litres/hour
+float total = 0.0;
+unsigned char flowsensor = 2; // Sensor Input
+unsigned long currentTime;
+unsigned long cloopTime;
+
+void flow () // Interrupt function
+{
+  flow_frequency += 1.0;
+}
 
 void setup()
 {
-  lcd.init();                      // initialize the lcd 
-  // Print a message to the LCD.
-  lcd.backlight();
-  lcd.setCursor(3,0);
-  lcd.print("Hello, world!");
-  lcd.setCursor(2,1);
-  lcd.print("Ywrobot Arduino!");
-   lcd.setCursor(0,2);
-  lcd.print("Arduino LCM IIC 2004");
-   lcd.setCursor(2,3);
-  lcd.print("Power By Ec-yuan!");
+   pinMode(flowsensor, INPUT);
+   digitalWrite(flowsensor, HIGH); // Optional Internal Pull-Up
+   Serial.begin(9600);
+   attachInterrupt(0, flow, RISING); // Setup Interrupt
+   sei(); // Enable interrupts
+   currentTime = millis();
+   cloopTime = currentTime;
 }
 
-
-void loop()
+void loop ()
 {
+  currentTime = millis();
+  cloopTime = currentTime;          // Updates cloopTime
+  l_hour = 100.0 * flow_frequency / 7.5;  // (Pulse frequency x 60 min) / 7.5Q = flowrate in L/hour
+  flow_frequency = 0;               // Reset Counter
+  Serial.println(l_hour);      // Print litres/hour
+  delay(10);
 }

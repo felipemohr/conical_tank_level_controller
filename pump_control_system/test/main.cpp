@@ -88,7 +88,7 @@ int main()
       lcd.printf("H: %.2f cm", water_height);
       update_lcd = false;
     }
-    // pc.printf("%.2f\n", water_height);
+    pc.printf("%.2f\n", water_height);
     wait(1/SAMPLING_FREQUENCY);
   }
 
