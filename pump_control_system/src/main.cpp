@@ -1,110 +1,105 @@
 #include "mbed.h"
-#include "hcsr04.h"
-#include "fir_coeffs.h"
 #include "TextLCD.h"
+
+#include "height_sensor/HeightSensor.h"
+#include "pid_controller/PIDController.h"
 
 #include <stdint.h>
 
 #define SAMPLING_FREQUENCY 100.0f
 #define LCD_UPDATE_TIME 1.0f
-#define CONE_HEIGHT 70.0f
 
-struct FIRFilter
-{
-  float   buf[FILTER_NUM_COEFFS];
-  uint8_t bufIndex;
+// Serial pc(PB_6, PB_7);
 
-  float out;
-};
-
-void FIRFilter_Init(FIRFilter *fir);
-float FIRFilter_Update(FIRFilter *fir, float inp);
-
-Serial pc(PB_6, PB_7);
-
-HCSR04 usensor(PB_10, PB_11);
+// LCD
 TextLCD lcd(PA_8, PA_9, PA_10, PA_11, PA_12, PA_15);
-
-Ticker sensor_ticker;
-void readUltrassonic();
-
 Ticker lcd_ticker;
 void updateLCD();
-
-unsigned int millis = 0;
-
-void FIRFilter_Init(FIRFilter *fir)
-{
-  for (uint8_t n=0; n<FILTER_NUM_COEFFS; n++)
-    fir->buf[n] = 0.0f;
-  fir->bufIndex = 0;
-  fir->out = 0.0f;
-}
-
-
-float FIRFilter_Update(FIRFilter *fir, float inp)
-{
-  fir->buf[fir->bufIndex] = inp;
-  
-  fir->bufIndex++;
-  if(fir->bufIndex == FILTER_NUM_COEFFS)
-    fir->bufIndex = 0;
-
-  fir->out = 0.0f;
-
-  uint8_t sumIndex = fir->bufIndex;
-
-  for (uint8_t n=0; n<FILTER_NUM_COEFFS; n++)
-  {
-    if (sumIndex > 0) sumIndex--;
-    else sumIndex = FILTER_NUM_COEFFS - 1;
-    fir->out += FIR_COEFFS[n] * fir->buf[sumIndex];
-  }
-
-  return fir->out;
-
-}
-
-
-FIRFilter lpf;
-float dist_raw;
-float dist_filtered;
-float water_height;
-
 bool update_lcd = true;
+
+// Interface
+AnalogIn setpoint_pot(PA_0);
+InterruptIn setpoint_but(PA_3);
+float desired_height;
+
+// Height Sensor
+HeightSensor usensor(PB_10, PB_11);
+Ticker sensor_ticker;
+void readHeight();
+
+// Valve
+DigitalOut valve_direction(PB_12);
+PwmOut valve_pwm(PB_13);
+void valveInitialOpening();
+
+// Pump
+PIDController pump_pid_controller;
+DigitalOut pump_en(PB_5);
+PwmOut pump_pwm(PB_15);
+float pump_pid_val;
+
 
 int main()
 {
-  FIRFilter_Init(&lpf);
 
-  sensor_ticker.attach(&readUltrassonic, 1/SAMPLING_FREQUENCY);
+  sensor_ticker.attach(&readHeight, 1/SAMPLING_FREQUENCY);
   lcd_ticker.attach(&updateLCD, LCD_UPDATE_TIME);
+
+
+
+  // Read setpoint
+  while(!valve_direction.read())
+  {
+    desired_height = 100*(0.35 + 0.30*setpoint_pot.read());
+    lcd.cls();
+    lcd.printf("Setpoint: %.1f cm", desired_height);
+    wait_ms(300);
+
+  }
+
+  pump_pid_controller.setKPID(1.0, 0.0, 0.0);
+  pump_pid_controller.setSetpoint(50.0);
+
+  // Set valve initial opening
+  valveInitialOpening();
+
+  pump_en = 1;
+  pump_pwm = 0.0;
 
   while(1)
   {
     if (update_lcd)
     {
       lcd.cls();
-      lcd.printf("H: %.2f cm", water_height);
+      lcd.printf("H: %.1f cm", usensor.getWaterHeight());
       update_lcd = false;
     }
-    // pc.printf("%.2f\n", water_height);
-    wait(1/SAMPLING_FREQUENCY);
+
+    // Pump Controller
+    pump_pid_val = pump_pid_controller.processPID(usensor.getWaterHeight());
+    pump_pwm = max(0.5f, min(pump_pid_val, 1.0f) );
+    if (pump_pwm < 0.5) pump_en = 0;
+    else pump_en = 1;
+
+    wait_ms(100);
   }
 
 }
 
 
-void readUltrassonic()
-{
-  usensor.start();
-  dist_raw = min(usensor.get_dist_cm(), CONE_HEIGHT);
-  dist_filtered = FIRFilter_Update(&lpf, dist_raw);
-  water_height = CONE_HEIGHT - dist_filtered;
-}
 
 
 void updateLCD()
 {
   update_lcd = true;
+}
+
+void readHeight()
+{
+  usensor.readSensor();
+}
+
+void valveInitialOpening()
+{
+
 }

@@ -19,7 +19,7 @@ private:
   float _setpoint;
   float _pid_result;
   
-  int _millis = 0;
+  unsigned int _millis = 0;
   Ticker _ticker;
 
   void millisTicker();
