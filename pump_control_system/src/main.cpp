@@ -1,8 +1,8 @@
 #include "mbed.h"
 #include "TextLCD.h"
 
-#include "height_sensor/HeightSensor.h"
-#include "pid_controller/PIDController.h"
+#include "height_sensor/HeightSensor.cpp"
+#include "pid_controller/PIDController.cpp"
 
 #include <stdint.h>
 
@@ -11,21 +11,25 @@
 
 // Serial pc(PB_6, PB_7);
 
+
+// Ticker
+Ticker millis_ticker;
+void tickerMillis();
+
 // LCD
 TextLCD lcd(PA_8, PA_9, PA_10, PA_11, PA_12, PA_15);
-Ticker lcd_ticker;
-void updateLCD();
-bool update_lcd = true;
+int lcd_millis_cont = 0;
 
 // Interface
 AnalogIn setpoint_pot(PA_0);
-InterruptIn setpoint_but(PA_3);
+DigitalIn setpoint_but(PA_3);
+// InterruptIn setpoint_but(PA_3);
 float desired_height;
 
 // Height Sensor
 HeightSensor usensor(PB_10, PB_11);
-Ticker sensor_ticker;
-void readHeight();
+// Ticker sensor_ticker;
+// void readHeight();
 
 // Valve
 DigitalOut valve_direction(PB_12);
@@ -36,29 +40,30 @@ void valveInitialOpening();
 PIDController pump_pid_controller;
 DigitalOut pump_en(PB_5);
 PwmOut pump_pwm(PB_15);
-float pump_pid_val;
 
 
 int main()
 {
 
-  sensor_ticker.attach(&readHeight, 1/SAMPLING_FREQUENCY);
-  lcd_ticker.attach(&updateLCD, LCD_UPDATE_TIME);
-
+  // sensor_ticker.attach(&readHeight, 1/SAMPLING_FREQUENCY);
+  millis_ticker.attach(&tickerMillis, 0.001);
 
 
   // Read setpoint
-  while(!valve_direction.read())
+  while(!setpoint_but.read())
   {
     desired_height = 100*(0.35 + 0.30*setpoint_pot.read());
     lcd.cls();
-    lcd.printf("Setpoint: %.1f cm", desired_height);
+    lcd.printf("Setpoint: ");
+    lcd.locate(9,1);
+    lcd.printf("%.1f cm", desired_height);
     wait_ms(300);
 
   }
 
-  pump_pid_controller.setKPID(1.0, 0.0, 0.0);
-  pump_pid_controller.setSetpoint(50.0);
+  pump_pid_controller.setKPID(1.0, 0.002, 0.0);
+  pump_pid_controller.setPIDLimits(0.5f, 1.0f);
+  pump_pid_controller.setSetpoint(desired_height/100);
 
   // Set valve initial opening
   valveInitialOpening();
@@ -68,38 +73,43 @@ int main()
 
   while(1)
   {
-    if (update_lcd)
-    {
-      lcd.cls();
-      lcd.printf("H: %.1f cm", usensor.getWaterHeight());
-      update_lcd = false;
-    }
 
+    usensor.readSensor();
+
+    // readHeight();
     // Pump Controller
-    pump_pid_val = pump_pid_controller.processPID(usensor.getWaterHeight());
-    pump_pwm = max(0.5f, min(pump_pid_val, 1.0f) );
-    if (pump_pwm < 0.5) pump_en = 0;
+    pump_pwm = pump_pid_controller.processPID(usensor.getWaterHeight()/100);
+    if (pump_pwm.read() < 0.5) pump_en = 0;
     else pump_en = 1;
 
-    wait_ms(100);
+
+    if (lcd_millis_cont > 1000*int(LCD_UPDATE_TIME))
+    {
+      lcd_millis_cont = 0;
+      lcd.cls();
+      lcd.printf("H: %.1f", usensor.getWaterHeight());
+      lcd.locate(0,1);
+      lcd.printf("PID: %.3f", pump_pwm.read());
+    }
+
+    wait_ms(1000/SAMPLING_FREQUENCY);
   }
 
 }
 
 
-
-
-void updateLCD()
-{
-  update_lcd = true;
-}
-
-void readHeight()
-{
-  usensor.readSensor();
-}
-
 void valveInitialOpening()
 {
+  // valve_direction = 1;
+  // valve_pwm = 1;
+  // wait_ms(10000);
+  // valve_direction = 0;
+  // wait_ms(4000);
+  // valve_pwm = 1;
+}
 
+void tickerMillis()
+{
+  pump_pid_controller.millisTicker();
+  lcd_millis_cont++;
 }

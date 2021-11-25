@@ -2,20 +2,20 @@
 
 PIDController::PIDController()
 {
-  this->_ticker.attach(PIDController::millisTicker, 0.001);
+  // ticker.attach(callback(this, &PIDController::millisTicker), 0.001);
 }
 
 PIDController::PIDController(float kp, float ki, float kd)
   : _kp(kp), _ki(ki), _kd(kd)
 {
-  this->_ticker.attach(PIDController::millisTicker, 0.001);
+  // ticker.attach(callback(this, &PIDController::millisTicker), 0.001);
 }
 
 PIDController::~PIDController()
 {
 }
 
-void PIDController::millisTicker()
+void PIDController::millisTicker(void)
 {
   this->_millis++;
 }
@@ -47,21 +47,29 @@ void PIDController::setSetpoint(float setpoint)
   this->_setpoint = setpoint;
 }
 
+void PIDController::setPIDLimits(float min, float max)
+{
+  this->_pid_min = min;
+  this->_pid_max = max;
+}
+
 float PIDController::processPID(float curr_point)
 {
   this->_curr_time = this->_millis / 1000;
   this->_delta_time = this->_curr_time - this->_last_time;
 
-  this->_error = curr_point - this->_setpoint;
+  this->_error = this->_setpoint - curr_point;
   this->_sum_error  += this->_error;
   this->_delta_error = this->_error - this->_last_error;
 
   this->_pid_result  = this->_kp * this->_error
-                     + this->_ki * this->_sum_error * this->_curr_time
-                     + this->_kd * this->_delta_error / this->_delta_time;
+                     + this->_ki * this->_sum_error * this->_curr_time;
+                    //  + this->_kd * this->_delta_error / this->_delta_time;
 
   this->_last_time = this->_curr_time;
   this->_last_error = this->_error;
+
+  this->_pid_result = max(this->_pid_min, min(this->_pid_result, this->_pid_max) );
 
   return this->_pid_result;
 }

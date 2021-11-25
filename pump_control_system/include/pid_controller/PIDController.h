@@ -18,12 +18,11 @@ private:
 
   float _setpoint;
   float _pid_result;
+
+  float _pid_max;
+  float _pid_min;
   
   unsigned int _millis = 0;
-  Ticker _ticker;
-
-  void millisTicker();
-
 
 public:
   PIDController(float kp, float ki, float kd);
@@ -36,5 +35,10 @@ public:
   void setKd(float kd);
 
   void setSetpoint(float setpoint);
+  void setPIDLimits(float min, float max);
   float processPID(float curr_point);
+
+  // Ticker ticker;
+  void millisTicker(void);
+
 };
