@@ -77,7 +77,7 @@ main-build: tank_level_control.elf secondary-outputs
 
 # Tool invocations
 tank_level_control.elf: $(OBJS) $(USER_OBJS) /home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
