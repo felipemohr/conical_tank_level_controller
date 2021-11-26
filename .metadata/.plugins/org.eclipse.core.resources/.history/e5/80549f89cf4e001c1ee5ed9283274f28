@@ -1,0 +1,21 @@
+#ifndef HEIGHT_SENSOR_H
+#define HEIGHT_SENSOR_H
+
+#include "stm32f1xx_hal.h"
+
+#include "fir_coeffs.h"
+
+#define CONE_HEIGHT 70.0f
+
+struct FIRFilter
+{
+  float   buf[FILTER_NUM_COEFFS];
+  uint8_t bufIndex;
+
+  float out;
+};
+
+
+
+
+#endif

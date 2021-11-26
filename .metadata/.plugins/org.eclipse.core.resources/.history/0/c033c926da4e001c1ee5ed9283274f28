@@ -1,0 +1,75 @@
+/*
+ * HeightSensor.cpp
+ *
+ *  Created on: Nov 26, 2021
+ *      Author: Felipe Mohr
+ */
+
+#include "HeightSensor.h"
+
+
+void FIRFilter_Init(FIRFilter *fir)
+{
+  for (uint8_t n=0; n<FILTER_NUM_COEFFS; n++)
+    fir->buf[n] = 0.0f;
+  fir->bufIndex = 0;
+  fir->out = 0.0f;
+}
+
+
+float FIRFilter_Update(FIRFilter *fir, float inp)
+{
+  fir->buf[fir->bufIndex] = inp;
+
+  fir->bufIndex++;
+  if(fir->bufIndex == FILTER_NUM_COEFFS)
+    fir->bufIndex = 0;
+
+  fir->out = 0.0f;
+
+  uint8_t sumIndex = fir->bufIndex;
+
+  for (uint8_t n=0; n<FILTER_NUM_COEFFS; n++)
+  {
+    if (sumIndex > 0) sumIndex--;
+    else sumIndex = FILTER_NUM_COEFFS - 1;
+    fir->out += FIR_COEFFS[n] * fir->buf[sumIndex];
+  }
+
+  return fir->out;
+
+}
+
+
+HeightSensor::HeightSensor(GPIO_TypeDef* trig_port, uint16_t trig_pin,
+	  	   	   	   	   	   GPIO_TypeDef* echo_port, uint16_t echo_pin,
+						   TIM_HandleTypeDef *htim){
+	FIRFilter_Init(&lpf);
+
+	HAL_TIM_Base_Start(&htim);
+	HAL_GPIO_WritePin(trig_port, trig_pin, GPIO_PIN_RESET);
+}
+
+float HeightSensor::getDistRaw()
+{
+	return dist_raw;
+}
+
+float HeightSensor::getDistFiltered()
+{
+	return dist_filtered;
+}
+
+float HeightSensor::getWaterHeight()
+{
+	return water_height;
+}
+
+
+void HeightSensor::readSensor()
+{
+
+
+
+}
+

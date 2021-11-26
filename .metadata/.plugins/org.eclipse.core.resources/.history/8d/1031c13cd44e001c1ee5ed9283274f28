@@ -1,0 +1,14 @@
+/*
+ * HeightSensor.cpp
+ *
+ *  Created on: Nov 26, 2021
+ *      Author: senai
+ */
+
+#include "HeightSensor.h"
+
+HeightSensor::HeightSensor() {
+	// TODO Auto-generated constructor stub
+
+}
+

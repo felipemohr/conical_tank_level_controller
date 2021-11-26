@@ -1,0 +1,7 @@
+HeightSensor.cpp:11:6:void FIRFilter_Init(FIRFilter*)	24	static
+HeightSensor.cpp:20:7:float FIRFilter_Update(FIRFilter*, float)	32	static
+HeightSensor.cpp:44:1:HeightSensor::HeightSensor(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef)	24	static
+HeightSensor.cpp:56:7:float HeightSensor::getDistRaw()	16	static
+HeightSensor.cpp:61:7:float HeightSensor::getDistFiltered()	16	static
+HeightSensor.cpp:66:7:float HeightSensor::getWaterHeight()	16	static
+HeightSensor.cpp:72:6:void HeightSensor::readSensor()	40	static

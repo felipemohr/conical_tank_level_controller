@@ -1,3 +1,6 @@
+#ifndef HEIGHT_SENSOR_H
+#define HEIGHT_SENSOR_H
+
 #include "mbed.h"
 #include "hcsr04.h"
 #include "fir_coeffs.h"
@@ -36,3 +39,4 @@ public:
 
 };
 
+#endif  // HEIGHT_SENSOR_H

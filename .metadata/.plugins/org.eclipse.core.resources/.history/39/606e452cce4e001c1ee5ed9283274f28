@@ -1,0 +1,18 @@
+#ifndef HEIGHT_SENSOR_H
+#define HEIGHT_SENSOR_H
+
+#define CONE_HEIGHT 70.0f
+
+struct FIRFilter
+{
+  float   buf[FILTER_NUM_COEFFS];
+  uint8_t bufIndex;
+
+  float out;
+};
+
+void FIRFilter_Init(FIRFilter *fir);
+float FIRFilter_Update(FIRFilter *fir, float inp);
+
+
+#endif

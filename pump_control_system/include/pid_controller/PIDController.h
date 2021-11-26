@@ -1,3 +1,6 @@
+#ifndef PID_CONTROLLER_H
+#define PID_CONTROLLER_H
+
 #include "mbed.h"
 
 class PIDController
@@ -42,3 +45,5 @@ public:
   void millisTicker(void);
 
 };
+
+#endif  // PID_CONTROLLER_H

@@ -1,0 +1,3 @@
+HeightSensor.cpp:11:6:void FIRFilter_Init(FIRFilter*)	24	static
+HeightSensor.cpp:20:7:float FIRFilter_Update(FIRFilter*, float)	32	static
+HeightSensor.cpp:44:1:HeightSensor::HeightSensor()	16	static

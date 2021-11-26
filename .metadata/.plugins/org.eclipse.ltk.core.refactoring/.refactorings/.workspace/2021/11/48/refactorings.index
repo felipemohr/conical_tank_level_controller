@@ -1,2 +1,6 @@
 1637877026895	Delete resource 'tank_level_control'
 1637880480202	Delete resource 'tank_level_control'
+1637940399697	Delete resource 'tank_level_control/Core/Src/height_sensor/height_sensor'
+1637941381578	Delete resource 'tank_level_control/Core/Inc/height_sensor/HeightSensor.h'
+1637941392840	Delete resource 'tank_level_control/Core/Inc/height_sensor'
+1637941398827	Delete resource 'tank_level_control/Core/Src/height_sensor'
