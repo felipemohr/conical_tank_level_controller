@@ -1,0 +1,10 @@
+02:08:38 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4688	     20	   1572	   6280	   1888	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+
+02:08:38 Build Finished. 0 errors, 0 warnings. (took 470ms)
+

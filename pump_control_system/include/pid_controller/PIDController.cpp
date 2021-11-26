@@ -69,7 +69,7 @@ float PIDController::processPID(float curr_point)
   this->_last_time = this->_curr_time;
   this->_last_error = this->_error;
 
-  this->_pid_result = max(this->_pid_min, min(this->_pid_result, this->_pid_max) );
+  this->_pid_result = max(this->_pid_min, min(this->_pid_result, this->_pid_max));
 
   return this->_pid_result;
 }
