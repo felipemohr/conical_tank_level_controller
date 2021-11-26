@@ -1,35 +1,9 @@
-14:55:55 **** Incremental Build of configuration Debug for project tank_level_control ****
+17:52:10 **** Incremental Build of configuration Debug for project tank_level_control ****
 make -j12 all 
 arm-none-eabi-g++ "../Core/Src/height_sensor/HeightSensor.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/height_sensor/HeightSensor.d" -MT"Core/Src/height_sensor/HeightSensor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/height_sensor/HeightSensor.o"
 arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-In file included from ../Core/Src/height_sensor/HeightSensor.cpp:8:
-../Core/Src/height_sensor/HeightSensor.h: In constructor 'HeightSensor::HeightSensor(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef)':
-../Core/Src/height_sensor/HeightSensor.h:34:12: warning: 'HeightSensor::trig_pin' will be initialized after [-Wreorder]
-   34 |   uint16_t trig_pin;
-      |            ^~~~~~~~
-../Core/Src/height_sensor/HeightSensor.h:33:17: warning:   'GPIO_TypeDef* HeightSensor::echo_port' [-Wreorder]
-   33 |   GPIO_TypeDef* echo_port;
-      |                 ^~~~~~~~~
-../Core/Src/height_sensor/HeightSensor.cpp:44:1: warning:   when initialized here [-Wreorder]
-   44 | HeightSensor::HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
-      | ^~~~~~~~~~~~
-In file included from ../Core/Src/height_sensor/HeightSensor.cpp:8:
-../Core/Src/height_sensor/HeightSensor.h:35:11: warning: 'HeightSensor::echo_pin' will be initialized after [-Wreorder]
-   35 |   int16_t echo_pin;
-      |           ^~~~~~~~
-../Core/Src/height_sensor/HeightSensor.h:31:21: warning:   'TIM_HandleTypeDef HeightSensor::htim' [-Wreorder]
-   31 |   TIM_HandleTypeDef htim;
-      |                     ^~~~
-../Core/Src/height_sensor/HeightSensor.cpp:44:1: warning:   when initialized here [-Wreorder]
-   44 | HeightSensor::HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
-      | ^~~~~~~~~~~~
-../Core/Src/main.cpp: In function 'int main()':
-../Core/Src/main.cpp:102:13: warning: unused variable 'lpf' [-Wunused-variable]
-  102 |   FIRFilter lpf;
-      |             ^~~
 In file included from ../Core/Src/height_sensor/HeightSensor.h:12,
                  from ../Core/Src/main.cpp:26:
-../Core/Inc/fir_coeffs.h: At global scope:
 ../Core/Inc/fir_coeffs.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
     3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
       |              ^~~~~~~~~~
@@ -40,45 +14,32 @@ arm-none-eabi-size   tank_level_control.elf
 arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
 arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
    text	   data	    bss	    dec	    hex	filename
-  25568	    740	   1700	  28008	   6d68	tank_level_control.elf
+  30480	    748	   2252	  33480	   82c8	tank_level_control.elf
 Finished building: default.size.stdout
  
 Finished building: tank_level_control.bin
  
 Finished building: tank_level_control.list
  
-14:58:57 **** Incremental Build of configuration Debug for project tank_level_control ****
+17:52:29 **** Incremental Build of configuration Debug for project tank_level_control ****
 make -j12 all 
-arm-none-eabi-g++ "../Core/Src/height_sensor/HeightSensor.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/height_sensor/HeightSensor.d" -MT"Core/Src/height_sensor/HeightSensor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/height_sensor/HeightSensor.o"
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30480	    748	   2252	  33480	   82c8	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+17:53:09 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30480	    748	   2252	  33480	   82c8	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+17:55:26 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
 arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-In file included from ../Core/Src/height_sensor/HeightSensor.cpp:8:
-../Core/Src/height_sensor/HeightSensor.h: In constructor 'HeightSensor::HeightSensor(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef)':
-../Core/Src/height_sensor/HeightSensor.h:34:12: warning: 'HeightSensor::trig_pin' will be initialized after [-Wreorder]
-   34 |   uint16_t trig_pin;
-      |            ^~~~~~~~
-../Core/Src/height_sensor/HeightSensor.h:33:17: warning:   'GPIO_TypeDef* HeightSensor::echo_port' [-Wreorder]
-   33 |   GPIO_TypeDef* echo_port;
-      |                 ^~~~~~~~~
-../Core/Src/height_sensor/HeightSensor.cpp:44:1: warning:   when initialized here [-Wreorder]
-   44 | HeightSensor::HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
-      | ^~~~~~~~~~~~
-In file included from ../Core/Src/height_sensor/HeightSensor.cpp:8:
-../Core/Src/height_sensor/HeightSensor.h:35:11: warning: 'HeightSensor::echo_pin' will be initialized after [-Wreorder]
-   35 |   int16_t echo_pin;
-      |           ^~~~~~~~
-../Core/Src/height_sensor/HeightSensor.h:31:21: warning:   'TIM_HandleTypeDef HeightSensor::htim' [-Wreorder]
-   31 |   TIM_HandleTypeDef htim;
-      |                     ^~~~
-../Core/Src/height_sensor/HeightSensor.cpp:44:1: warning:   when initialized here [-Wreorder]
-   44 | HeightSensor::HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
-      | ^~~~~~~~~~~~
-../Core/Src/main.cpp: In function 'int main()':
-../Core/Src/main.cpp:102:13: warning: unused variable 'lpf' [-Wunused-variable]
-  102 |   FIRFilter lpf;
-      |             ^~~
 In file included from ../Core/Src/height_sensor/HeightSensor.h:12,
                  from ../Core/Src/main.cpp:26:
-../Core/Inc/fir_coeffs.h: At global scope:
 ../Core/Inc/fir_coeffs.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
     3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
       |              ^~~~~~~~~~
@@ -89,37 +50,21 @@ arm-none-eabi-size   tank_level_control.elf
 arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
 arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
    text	   data	    bss	    dec	    hex	filename
-  25832	    740	   1732	  28304	   6e90	tank_level_control.elf
+  30480	    748	   1892	  33120	   8160	tank_level_control.elf
 Finished building: default.size.stdout
  
 Finished building: tank_level_control.bin
  
 Finished building: tank_level_control.list
  
-14:59:45 **** Incremental Build of configuration Debug for project tank_level_control ****
+17:56:41 **** Incremental Build of configuration Debug for project tank_level_control ****
 make -j12 all 
-arm-none-eabi-g++ "../Core/Src/height_sensor/HeightSensor.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/height_sensor/HeightSensor.d" -MT"Core/Src/height_sensor/HeightSensor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/height_sensor/HeightSensor.o"
-In file included from ../Core/Src/height_sensor/HeightSensor.cpp:8:
-../Core/Src/height_sensor/HeightSensor.h: In constructor 'HeightSensor::HeightSensor(GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef)':
-../Core/Src/height_sensor/HeightSensor.h:34:12: warning: 'HeightSensor::trig_pin' will be initialized after [-Wreorder]
-   34 |   uint16_t trig_pin;
-      |            ^~~~~~~~
-../Core/Src/height_sensor/HeightSensor.h:33:17: warning:   'GPIO_TypeDef* HeightSensor::echo_port' [-Wreorder]
-   33 |   GPIO_TypeDef* echo_port;
-      |                 ^~~~~~~~~
-../Core/Src/height_sensor/HeightSensor.cpp:44:1: warning:   when initialized here [-Wreorder]
-   44 | HeightSensor::HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
-      | ^~~~~~~~~~~~
-In file included from ../Core/Src/height_sensor/HeightSensor.cpp:8:
-../Core/Src/height_sensor/HeightSensor.h:35:11: warning: 'HeightSensor::echo_pin' will be initialized after [-Wreorder]
-   35 |   int16_t echo_pin;
-      |           ^~~~~~~~
-../Core/Src/height_sensor/HeightSensor.h:31:21: warning:   'TIM_HandleTypeDef HeightSensor::htim' [-Wreorder]
-   31 |   TIM_HandleTypeDef htim;
-      |                     ^~~~
-../Core/Src/height_sensor/HeightSensor.cpp:44:1: warning:   when initialized here [-Wreorder]
-   44 | HeightSensor::HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
-      | ^~~~~~~~~~~~
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/height_sensor/HeightSensor.h:12,
+                 from ../Core/Src/main.cpp:26:
+../Core/Inc/fir_coeffs.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
+    3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
+      |              ^~~~~~~~~~
 arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: tank_level_control.elf
  
@@ -127,7 +72,7 @@ arm-none-eabi-size   tank_level_control.elf
 arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
 arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
    text	   data	    bss	    dec	    hex	filename
-  25520	    740	   1700	  27960	   6d38	tank_level_control.elf
+  30480	    748	   1892	  33120	   8160	tank_level_control.elf
 Finished building: default.size.stdout
  
 Finished building: tank_level_control.bin

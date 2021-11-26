@@ -24,6 +24,7 @@
 /* USER CODE BEGIN Includes */
 #include "lcd16x2.c"
 #include "height_sensor/HeightSensor.h"
+#include "pid_controller/PIDController.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,7 +42,10 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
 
@@ -51,12 +55,22 @@ TIM_HandleTypeDef htim2;
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+PIDController pump_pid_controller;
+
+uint16_t potVal;
+float setpoint;
+float pidVal;
+
+uint16_t LCDMillisCont = 0;
+bool updateLCD = true;
 
 /* USER CODE END 0 */
 
@@ -89,20 +103,30 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
+  MX_ADC1_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
-
-  //HAL_TIM_Base_Start(&htim2);
-  //HAL_GPIO_WritePin(TRIG_GPIO_Port, TRIG_Pin, GPIO_PIN_RESET);
+  HAL_TIM_Base_Start_IT(&htim4);
+  HAL_ADC_Start(&hadc1);
 
   lcd16x2_init_4bits(LCD_RS_GPIO_Port, LCD_RS_Pin, LCD_EN_Pin,
 		  	  	  	 LCD_D4_GPIO_Port, LCD_D4_Pin, LCD_D5_Pin, LCD_D6_Pin, LCD_D7_Pin);
 
-  lcd16x2_printf("Hello world!!");
-  HAL_Delay(1000);
-  FIRFilter lpf;
-  HeightSensor usensor(TRIG_GPIO_Port, TRIG_Pin, ECHO_GPIO_Port, ECHO_Pin, htim2);
-  lcd16x2_clear();
   lcd16x2_cursorShow(false);
+  while(!HAL_GPIO_ReadPin(SETPOINT_BUT_GPIO_Port, SETPOINT_BUT_Pin))
+  {
+	  HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+	  potVal = HAL_ADC_GetValue(&hadc1);
+	  setpoint = 0.35 + 0.30*(potVal/4036.0);
+	  lcd16x2_clear();
+	  lcd16x2_printf("Setpoint: ");
+	  lcd16x2_2ndLine();
+	  lcd16x2_printf("         %.1f cm", 100*setpoint);
+	  HAL_Delay(300);
+  }
+
+  HeightSensor usensor(TRIG_GPIO_Port, TRIG_Pin, ECHO_GPIO_Port, ECHO_Pin, htim2);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,15 +137,18 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-
 	usensor.readSensor();
-	lcd16x2_clear();
-	lcd16x2_1stLine();
-	lcd16x2_printf("Raw: %.1f cm", usensor.getDistRaw());
-	lcd16x2_2ndLine();
-	lcd16x2_printf("%.1f cm", usensor.getDistFiltered());
-	HAL_Delay(10);
+
+	if (updateLCD)
+	{
+		lcd16x2_clear();
+		lcd16x2_1stLine();
+		lcd16x2_printf("Setpoint: %.1fcm", setpoint*100);
+		lcd16x2_2ndLine();
+		lcd16x2_printf("H. atual: %.1fcm", usensor.getWaterHeight());
+		HAL_Delay(1000/SAMPLING_FREQUENCY);
+		updateLCD = false;
+	}
 
 
   }
@@ -136,6 +163,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
@@ -164,6 +192,57 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV6;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+/**
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_ADC1_Init(void)
+{
+
+  /* USER CODE BEGIN ADC1_Init 0 */
+
+  /* USER CODE END ADC1_Init 0 */
+
+  ADC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN ADC1_Init 1 */
+
+  /* USER CODE END ADC1_Init 1 */
+  /** Common config
+  */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.NbrOfConversion = 1;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ADC_CHANNEL_0;
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN ADC1_Init 2 */
+
+  /* USER CODE END ADC1_Init 2 */
+
 }
 
 /**
@@ -212,6 +291,51 @@ static void MX_TIM2_Init(void)
 }
 
 /**
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM4_Init(void)
+{
+
+  /* USER CODE BEGIN TIM4_Init 0 */
+
+  /* USER CODE END TIM4_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM4_Init 1 */
+
+  /* USER CODE END TIM4_Init 1 */
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 7200 - 1;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = 10 - 1;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim4, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM4_Init 2 */
+
+  /* USER CODE END TIM4_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -223,8 +347,8 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
@@ -242,6 +366,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : SETPOINT_BUT_Pin */
+  GPIO_InitStruct.Pin = SETPOINT_BUT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(SETPOINT_BUT_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : TRIG_Pin */
   GPIO_InitStruct.Pin = TRIG_Pin;
@@ -268,7 +398,21 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+// Callback: timer has reset
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim == &htim4)
+	{
+		LCDMillisCont++;
+		if (LCDMillisCont > 1000*int(LCD_UPDATE_TIME))
+		{
+			HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+			updateLCD = true;
+			LCDMillisCont = 0;
+		}
+	}
 
+}
 /* USER CODE END 4 */
 
 /**

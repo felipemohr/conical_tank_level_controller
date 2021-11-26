@@ -1,0 +1,16 @@
+/*
+ * PIDController.h
+ *
+ *  Created on: Nov 26, 2021
+ *      Author: senai
+ */
+
+#ifndef SRC_PID_CONTROLLER_PIDCONTROLLER_H_
+#define SRC_PID_CONTROLLER_PIDCONTROLLER_H_
+
+class PIDController {
+public:
+	PIDController();
+};
+
+#endif /* SRC_PID_CONTROLLER_PIDCONTROLLER_H_ */

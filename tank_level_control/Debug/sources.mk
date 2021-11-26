@@ -32,6 +32,7 @@ CPP_DEPS :=
 SUBDIRS := \
 Core/Src/height_sensor \
 Core/Src \
+Core/Src/pid_controller \
 Core/Startup \
 Drivers/STM32F1xx_HAL_Driver/Src \
 

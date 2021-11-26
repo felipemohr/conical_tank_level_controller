@@ -28,11 +28,11 @@ class HeightSensor
 {
 private:
 
-  TIM_HandleTypeDef htim;
   GPIO_TypeDef* trig_port;
-  GPIO_TypeDef* echo_port;
   uint16_t trig_pin;
+  GPIO_TypeDef* echo_port;
   int16_t echo_pin;
+  TIM_HandleTypeDef htim;
 
   FIRFilter lpf;
 
@@ -45,7 +45,6 @@ public:
   HeightSensor(GPIO_TypeDef* TRIG_PORT, uint16_t TRIG_PIN,
    	   	   	   GPIO_TypeDef* ECHO_PORT, uint16_t ECHO_PIN,
 			   TIM_HandleTypeDef HTMI) ;
-  ~HeightSensor();
 
   void readSensor();
 

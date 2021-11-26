@@ -58,6 +58,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SETPOINT_POT_Pin GPIO_PIN_0
+#define SETPOINT_POT_GPIO_Port GPIOA
+#define SETPOINT_BUT_Pin GPIO_PIN_3
+#define SETPOINT_BUT_GPIO_Port GPIOA
 #define TRIG_Pin GPIO_PIN_10
 #define TRIG_GPIO_Port GPIOB
 #define ECHO_Pin GPIO_PIN_11
@@ -75,7 +79,8 @@ void Error_Handler(void);
 #define LCD_D7_Pin GPIO_PIN_15
 #define LCD_D7_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
-
+#define SAMPLING_FREQUENCY 100.0f
+#define LCD_UPDATE_TIME 1.0f
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
