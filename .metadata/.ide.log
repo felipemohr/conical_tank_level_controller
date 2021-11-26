@@ -3146,3 +3146,663 @@
 2021-11-26 03:36:03,009 [INFO] IPUIPlugin:74 - create IPUIPlugin
 2021-11-26 03:36:03,009 [INFO] IPUIPlugin:74 - create IPUIPlugin
 2021-11-26 03:36:03,016 [INFO] OpenFileManager:333 - Restore cursor
+2021-11-26 10:13:26,464 [INFO] Activator:177 - 
+
+
+2021-11-26 10:13:26,467 [INFO] Activator:178 - !SESSION log4j initialized
+2021-11-26 10:40:08,451 [INFO] McuFinderGlobals:39 - Set McuFinder mode to 2 (CubeIDE integrated)
+2021-11-26 10:40:08,582 [INFO] ApplicationProperties:181 - Using Application install path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111
+2021-11-26 10:40:08,594 [INFO] DbMcusXml:74 - Set database path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//mcu/
+2021-11-26 10:40:08,597 [INFO] DbBoardsPdsc:56 - Set plugin database path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/boardmanager/
+2021-11-26 10:40:08,597 [INFO] DbMcus:258 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:08,597 [INFO] DbBoards:264 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:08,599 [INFO] DbExamples:333 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:08,604 [INFO] DbMcusAds:119 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:08,605 [INFO] DbMcusDocs:110 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:08,607 [INFO] DbMcusJson:64 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:08,608 [INFO] DbBoardsDocs:110 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:08,610 [INFO] DbBoardsJson:57 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,473 [INFO] CrossReferenceDbSqlite:196 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/cs/
+2021-11-26 10:40:09,484 [INFO] DbExamplesSqlite:767 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,590 [INFO] RulesReader:57 - Compatibility file has been processed (242 Rules)
+2021-11-26 10:40:09,647 [INFO] DbMcusXml:74 - Set database path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//mcu/
+2021-11-26 10:40:09,648 [INFO] DbBoardsPdsc:56 - Set plugin database path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/boardmanager/
+2021-11-26 10:40:09,649 [INFO] DbMcus:258 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:09,649 [INFO] DbBoards:264 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:09,649 [INFO] DbExamples:333 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:09,649 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,649 [INFO] DbMcusAds:119 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,649 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,649 [INFO] DbMcusDocs:110 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,649 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,650 [INFO] DbMcusJson:64 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,650 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,650 [INFO] DbBoardsDocs:110 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,650 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,650 [INFO] DbBoardsJson:57 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,650 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,650 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,650 [INFO] CrossReferenceDbSqlite:196 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/cs/
+2021-11-26 10:40:09,651 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,651 [INFO] DbExamplesSqlite:767 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,706 [INFO] MainPanel:214 - HeapMemory: 310378496
+2021-11-26 10:40:09,800 [INFO] DbMcusXml:74 - Set database path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//mcu/
+2021-11-26 10:40:09,800 [INFO] DbBoardsPdsc:56 - Set plugin database path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/boardmanager/
+2021-11-26 10:40:09,800 [INFO] DbMcus:258 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:09,801 [INFO] DbBoards:264 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:09,801 [INFO] DbExamples:333 - Set plugin images path to: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//plugins/mcufinder/images/
+2021-11-26 10:40:09,801 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,801 [INFO] DbMcusAds:119 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,802 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,802 [INFO] DbMcusDocs:110 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,802 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,802 [INFO] DbMcusJson:64 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,802 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,802 [INFO] DbBoardsDocs:110 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,802 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,803 [INFO] DbBoardsJson:57 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,803 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,803 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,803 [INFO] CrossReferenceDbSqlite:196 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/cs/
+2021-11-26 10:40:09,803 [WARN] DbFile:35 - Overriding database path with different value: /home/senai/.stmcufinder/plugins/mcufinder/ => /home/senai/.stmcufinder/plugins/mcufinder
+2021-11-26 10:40:09,804 [INFO] DbExamplesSqlite:767 - Set database path to: /home/senai/.stmcufinder/plugins/mcufinder//mcu/
+2021-11-26 10:40:09,817 [INFO] ApplicationProperties:181 - Using Application install path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111
+2021-11-26 10:40:09,818 [INFO] PluginManage:188 - Search for loadable plugins [exclusion list=, ]
+2021-11-26 10:40:09,819 [INFO] PluginManage:302 - Check plugin analytics
+2021-11-26 10:40:09,961 [INFO] AnalyticsPlugin:257 - Accepted Software Licenses: 
+2021-11-26 10:40:09,962 [INFO] AnalyticsPlugin:259 - Accepted CMSIS Pack Licenses: 
+2021-11-26 10:40:09,962 [INFO] AnalyticsPlugin:261 - Accepted Firmware Licenses: 
+2021-11-26 10:40:09,963 [INFO] PluginManage:352 - Loaded plugin analytics (category:tool,tabindex:-1)
+2021-11-26 10:40:09,963 [INFO] PluginManage:302 - Check plugin clock
+2021-11-26 10:40:09,977 [INFO] PluginManage:352 - Loaded plugin clock (category:base,tabindex:2)
+2021-11-26 10:40:09,978 [INFO] PluginManage:302 - Check plugin ddr
+2021-11-26 10:40:09,982 [INFO] PluginManage:352 - Loaded plugin ddr (category:tool,tabindex:6)
+2021-11-26 10:40:09,982 [INFO] PluginManage:302 - Check plugin filemanager
+2021-11-26 10:40:10,124 [INFO] PluginManage:352 - Loaded plugin filemanager (category:base,tabindex:10)
+2021-11-26 10:40:10,124 [INFO] PluginManage:302 - Check plugin ipmanager
+2021-11-26 10:40:10,130 [INFO] PluginManage:352 - Loaded plugin ipmanager (category:base,tabindex:5)
+2021-11-26 10:40:10,131 [INFO] PluginManage:302 - Check plugin pinoutandconfiguration
+2021-11-26 10:40:10,139 [INFO] PluginManage:352 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2021-11-26 10:40:10,139 [INFO] PluginManage:302 - Check plugin pinoutconfig
+2021-11-26 10:40:10,167 [INFO] PluginManage:352 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2021-11-26 10:40:10,167 [INFO] PluginManage:302 - Check plugin power
+2021-11-26 10:40:10,181 [INFO] PluginManage:352 - Loaded plugin power (category:power,tabindex:4)
+2021-11-26 10:40:10,182 [INFO] PluginManage:302 - Check plugin projectmanager
+2021-11-26 10:40:10,200 [INFO] PluginManage:352 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2021-11-26 10:40:10,200 [INFO] PluginManage:302 - Check plugin thirdparty
+2021-11-26 10:40:10,321 [WARN] IntegrityCheckThread:78 - waiting for thirdparty lock release [integrity check]
+2021-11-26 10:40:10,322 [INFO] IntegrityCheckThread:80 - entering critical section [integrity check]
+2021-11-26 10:40:10,321 [INFO] PluginManage:352 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2021-11-26 10:40:10,322 [INFO] ThirdPartyUpdaterWithRetryManager:66 - Updater plugin not ready yet. [1/15]
+2021-11-26 10:40:10,322 [INFO] PluginManage:302 - Check plugin tools
+2021-11-26 10:40:10,325 [INFO] PluginManage:352 - Loaded plugin tools (category:base,tabindex:7)
+2021-11-26 10:40:10,325 [INFO] PluginManage:302 - Check plugin tutovideos
+2021-11-26 10:40:10,513 [INFO] PluginManage:352 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2021-11-26 10:40:10,514 [INFO] PluginManage:302 - Check plugin updater
+2021-11-26 10:40:10,527 [INFO] PluginManage:352 - Loaded plugin updater (category:base,tabindex:12)
+2021-11-26 10:40:10,528 [INFO] PluginManage:275 - PluginManage : Loaded plugins [13]
+2021-11-26 10:40:10,746 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 10:40:10,812 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,813 [INFO] PluginManager:213 - loadIPPluginJar : add quadspi
+2021-11-26 10:40:10,820 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,821 [INFO] PluginManager:213 - loadIPPluginJar : add gpio
+2021-11-26 10:40:10,827 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,827 [INFO] PluginManager:213 - loadIPPluginJar : add sai
+2021-11-26 10:40:10,833 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,833 [INFO] PluginManager:213 - loadIPPluginJar : add fmc
+2021-11-26 10:40:10,835 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,836 [INFO] PluginManager:213 - loadIPPluginJar : add spi
+2021-11-26 10:40:10,838 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,838 [INFO] PluginManager:213 - loadIPPluginJar : add hash
+2021-11-26 10:40:10,840 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,840 [INFO] PluginManager:213 - loadIPPluginJar : add dfsdm
+2021-11-26 10:40:10,844 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,845 [INFO] PluginManager:213 - loadIPPluginJar : add ipddr
+2021-11-26 10:40:10,849 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,850 [INFO] PluginManager:213 - loadIPPluginJar : add i2s
+2021-11-26 10:40:10,853 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,853 [INFO] PluginManager:213 - loadIPPluginJar : add cryp
+2021-11-26 10:40:10,855 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,855 [INFO] PluginManager:213 - loadIPPluginJar : add fatfs
+2021-11-26 10:40:10,861 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,862 [INFO] PluginManager:213 - loadIPPluginJar : add freertos
+2021-11-26 10:40:10,864 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,865 [INFO] PluginManager:213 - loadIPPluginJar : add tracer_emb
+2021-11-26 10:40:10,870 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,870 [INFO] PluginManager:213 - loadIPPluginJar : add dma
+2021-11-26 10:40:10,872 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,872 [INFO] PluginManager:213 - loadIPPluginJar : add can
+2021-11-26 10:40:10,876 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,877 [INFO] PluginManager:213 - loadIPPluginJar : add resmgrutility
+2021-11-26 10:40:10,880 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,880 [INFO] PluginManager:213 - loadIPPluginJar : add gtzc
+2021-11-26 10:40:10,884 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,884 [INFO] PluginManager:213 - loadIPPluginJar : add ltdc
+2021-11-26 10:40:10,888 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,889 [INFO] PluginManager:213 - loadIPPluginJar : add pdm2pcm
+2021-11-26 10:40:10,891 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,891 [INFO] PluginManager:213 - loadIPPluginJar : add comp
+2021-11-26 10:40:10,894 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,894 [INFO] PluginManager:213 - loadIPPluginJar : add usbx
+2021-11-26 10:40:10,896 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,896 [INFO] PluginManager:213 - loadIPPluginJar : add tsc
+2021-11-26 10:40:10,902 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,902 [INFO] PluginManager:213 - loadIPPluginJar : add gic
+2021-11-26 10:40:10,904 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,905 [INFO] PluginManager:213 - loadIPPluginJar : add ts
+2021-11-26 10:40:10,909 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,909 [INFO] PluginManager:213 - loadIPPluginJar : add stm32_wpan
+2021-11-26 10:40:10,916 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,916 [INFO] PluginManager:213 - loadIPPluginJar : add linkedlist
+2021-11-26 10:40:10,919 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,919 [INFO] PluginManager:213 - loadIPPluginJar : add i2c
+2021-11-26 10:40:10,926 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,928 [INFO] PluginManager:213 - loadIPPluginJar : add plateformsettings
+2021-11-26 10:40:10,931 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,931 [INFO] PluginManager:213 - loadIPPluginJar : add opamp
+2021-11-26 10:40:10,932 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,933 [INFO] PluginManager:213 - loadIPPluginJar : add tim
+2021-11-26 10:40:10,935 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,935 [INFO] PluginManager:213 - loadIPPluginJar : add gfxmmu
+2021-11-26 10:40:10,936 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,936 [INFO] PluginManager:213 - loadIPPluginJar : add dma3
+2021-11-26 10:40:10,939 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,939 [INFO] PluginManager:213 - loadIPPluginJar : add aes
+2021-11-26 10:40:10,941 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,942 [INFO] PluginManager:213 - loadIPPluginJar : add usart
+2021-11-26 10:40:10,943 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,943 [INFO] PluginManager:213 - loadIPPluginJar : add genericplugin
+2021-11-26 10:40:10,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,949 [INFO] PluginManager:213 - loadIPPluginJar : add nvic
+2021-11-26 10:40:10,951 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,952 [INFO] PluginManager:213 - loadIPPluginJar : add openamp
+2021-11-26 10:40:10,955 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,955 [INFO] PluginManager:213 - loadIPPluginJar : add touchsensing
+2021-11-26 10:40:10,960 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,961 [INFO] PluginManager:213 - loadIPPluginJar : add adc
+2021-11-26 10:40:10,966 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,966 [INFO] PluginManager:213 - loadIPPluginJar : add mdma
+2021-11-26 10:40:10,967 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,967 [INFO] PluginManager:213 - loadIPPluginJar : add ucpd
+2021-11-26 10:40:10,969 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:10,970 [INFO] PluginManager:213 - loadIPPluginJar : add lorawan
+2021-11-26 10:40:11,233 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,314 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,318 [INFO] DbMcusAds:47 - JSON generation date=Thu Sep 30 03:55:09 BRT 2021 (1632984909377)
+2021-11-26 10:40:11,319 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,354 [WARN] DetailPanel:314 - Failed to get advertising image, set to default
+2021-11-26 10:40:11,441 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,442 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,442 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,442 [WARN] DetailPanel:314 - Failed to get advertising image, set to default
+2021-11-26 10:40:11,443 [FATAL] Updater:294 - Updater called before beeing initialized
+2021-11-26 10:40:11,493 [ERROR] Updater:1075 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2021-11-26 10:40:11,494 [INFO] Updater:1012 - Updater Version found : 6.3.0
+2021-11-26 10:40:11,511 [INFO] ApplicationProperties:181 - Using Application install path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111
+2021-11-26 10:40:11,722 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 10:40:11,724 [INFO] MainUpdater:265 - Updater Check For Update Now.
+2021-11-26 10:40:11,724 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 10:40:11,894 [INFO] CheckServerUpdateThread:112 - End of CheckServer Thread
+2021-11-26 10:40:11,937 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 10:40:11,939 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 10:40:12,083 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 10:40:12,083 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 10:40:12,084 [WARN] ThirdParty:813 - waiting for thirdparty lock release [close project]
+2021-11-26 10:40:13,381 [INFO] ThirdParty:915 - Integrity check success = true
+2021-11-26 10:40:13,381 [INFO] IntegrityCheckThread:94 - exiting critical section [integrity check]
+2021-11-26 10:40:13,381 [INFO] IntegrityCheckThread:97 - End integrity checks thread
+2021-11-26 10:40:13,381 [INFO] ThirdParty:815 - entering critical section [close project]
+2021-11-26 10:40:13,382 [INFO] ThirdParty:825 - exiting critical section [close project]
+2021-11-26 10:40:13,384 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 10:40:13,385 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 151994144 Bytes (310378496)
+2021-11-26 10:40:13,386 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 10:40:13,386 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 10:40:13,386 [INFO] OpenFileManager:313 - Change cursor
+2021-11-26 10:40:13,965 [INFO] Context:592 - Trying to add GPIOservice into a context  which must be forbidden
+2021-11-26 10:40:14,251 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 10:40:14,252 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 10:40:14,252 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 10:40:14,252 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 10:40:14,252 [WARN] ModelIntegratedComponent:181 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,254 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,255 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,256 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 10:40:14,264 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (ADCFreqValue) has invalid value (36000000)
+2021-11-26 10:40:14,265 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2021-11-26 10:40:14,265 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2021-11-26 10:40:14,265 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2021-11-26 10:40:14,330 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 135609840 Bytes (310378496)
+2021-11-26 10:40:14,332 [INFO] DbMcusXml:100 - Load MCU database from /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db//mcu/families.xml
+2021-11-26 10:40:14,990 [INFO] DbMcusJson:93 - JSON generation date=Fri Oct 29 04:56:29 BRT 2021 (1635494189)
+2021-11-26 10:40:15,901 [INFO] DbMcus:175 - Found 1951 MCUs (1903 are supported by CubeMX, 1905 are visible in CubeMX)
+2021-11-26 10:40:15,902 [INFO] ApiDb:251 - Load user favorites file /home/senai/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2021-11-26 10:40:15,903 [INFO] ApiDb:255 - User favorites MCUs=[STM32F103C8Tx]
+2021-11-26 10:40:15,903 [INFO] DbMcus:187 - Set 1 / 1 favorites MCUs
+2021-11-26 10:40:15,905 [WARN] ThirdParty:779 - waiting for thirdparty lock release [change project]
+2021-11-26 10:40:15,905 [INFO] ThirdParty:781 - entering critical section [change project]
+2021-11-26 10:40:15,905 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-11-26 10:40:15,905 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-11-26 10:40:15,905 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-11-26 10:40:15,905 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-11-26 10:40:15,906 [INFO] ThirdParty:787 - exiting critical section [change project]
+2021-11-26 10:40:16,205 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 10:40:16,206 [INFO] PinOutPanel:1463 - setPackage(STM32F103C8Tx,LQFP48)
+2021-11-26 10:40:16,810 [INFO] UtilMem:74 - Before build in PCC Used Memory: 237504512 Bytes (490733568)
+2021-11-26 10:40:17,542 [INFO] UtilMem:74 - After build in PCC Used Memory: 289933312 Bytes (490733568)
+2021-11-26 10:40:17,565 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,566 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,566 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,567 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,567 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,567 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,567 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,567 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,568 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,568 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,568 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,568 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,569 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,569 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,570 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,570 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,570 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,570 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,570 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,570 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,571 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,571 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,571 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,571 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,571 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,572 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,572 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 10:40:17,727 [INFO] OpenFileManager:333 - Restore cursor
+2021-11-26 10:42:30,384 [INFO] DbMcusDocs:143 - JSON generation date=Fri Oct 29 04:56:29 BRT 2021 (1635494189)
+2021-11-26 10:42:30,527 [INFO] DbMcusDocs:79 - Found 682 MCUs documents
+2021-11-26 10:44:40,514 [INFO] RtosManager:791 - Current active RTOS is FREERTOS [Cortex-M3NS]
+2021-11-26 10:44:40,660 [INFO] ApiDbMcu:468 - Load IP Config File for FREERTOS
+2021-11-26 10:44:40,809 [ERROR] RtosPanel:552 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-11-26 10:44:40,871 [ERROR] RtosPanel:552 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2021-11-26 10:44:42,656 [INFO] RtosManager:802 - There is no active RTOS [Cortex-M3NS]
+2021-11-26 10:56:44,684 [INFO] Pin:2088 - value.trim() ECHO
+2021-11-26 10:56:44,684 [INFO] Pin:2089 - Pin value PB11
+2021-11-26 10:59:27,831 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 316818384 Bytes (490733568)
+2021-11-26 10:59:29,908 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 344603600 Bytes (490733568)
+2021-11-26 10:59:48,656 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 306547760 Bytes (490733568)
+2021-11-26 10:59:48,940 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 10:59:48,941 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 10:59:48,941 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 10:59:48,941 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 10:59:48,941 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 10:59:48,941 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 10:59:49,263 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 10:59:49,573 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 10:59:49,607 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 10:59:49,681 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 10:59:49,734 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 10:59:49,821 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 10:59:49,822 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 10:59:49,873 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 10:59:49,876 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 10:59:49,990 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 10:59:49,991 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 10:59:50,045 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 10:59:50,047 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 10:59:50,100 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 10:59:50,113 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 10:59:50,113 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 10:59:50,115 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 10:59:50,168 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 10:59:50,170 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 10:59:50,307 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 10:59:50,823 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 39mS.
+2021-11-26 10:59:50,827 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 10:59:51,153 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 10:59:51,161 [INFO] ApiDbMcu:468 - Load IP Config File for FATFS
+2021-11-26 10:59:51,165 [INFO] ApiDbMcu:468 - Load IP Config File for USB_DEVICE
+2021-11-26 10:59:52,625 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1798mS.
+2021-11-26 10:59:52,626 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
+2021-11-26 10:59:52,626 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:19:12,049 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 225572776 Bytes (677380096)
+2021-11-26 11:19:13,324 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 243204064 Bytes (677380096)
+2021-11-26 11:19:15,109 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 315750312 Bytes (677380096)
+2021-11-26 11:19:15,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:19:15,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:19:15,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:19:15,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:19:15,230 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:19:15,231 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:19:15,351 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:19:15,391 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:19:15,403 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:19:15,445 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:19:15,490 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:19:15,543 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:19:15,544 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:19:15,585 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:19:15,587 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:19:15,650 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:19:15,651 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:19:15,689 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:19:15,691 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:19:15,736 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:19:15,814 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:19:15,814 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:19:15,816 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:19:15,861 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:19:15,862 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:19:15,935 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:19:16,322 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 11:19:16,323 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:19:16,489 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:19:17,631 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1308mS.
+2021-11-26 11:19:17,631 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:19:17,632 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:20:24,291 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 444897776 Bytes (757071872)
+2021-11-26 11:20:25,988 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 629737784 Bytes (757071872)
+2021-11-26 11:20:41,237 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 222890960 Bytes (757071872)
+2021-11-26 11:20:41,376 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:20:41,377 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:20:41,377 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:20:41,377 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:20:41,377 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:20:41,377 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:20:41,537 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:20:41,569 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:20:41,579 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:20:41,615 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:20:41,647 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:20:41,691 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:20:41,692 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:20:41,726 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:20:41,729 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:20:41,784 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:20:41,785 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:20:41,817 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:20:41,818 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:20:41,856 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:20:41,863 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:20:41,863 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:20:41,864 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:20:41,901 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:20:41,901 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:20:41,958 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:20:42,366 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 11mS.
+2021-11-26 11:20:42,367 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:20:42,580 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:20:43,572 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1205mS.
+2021-11-26 11:20:43,572 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:20:43,572 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:34:12,129 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x140,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:34:21,803 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:35:52,757 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:35:54,827 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:35:57,338 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:00,831 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:02,549 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:02,596 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:04,053 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:06,166 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:06,224 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:11,614 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:13,509 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:13,565 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:16,268 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:20,501 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:23,086 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:36:25,142 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:38:52,961 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:38:53,843 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:38:55,116 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:38:55,994 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:39:32,634 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 662335488 Bytes (784334848)
+2021-11-26 11:39:34,350 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 326683384 Bytes (784334848)
+2021-11-26 11:39:46,914 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 651426864 Bytes (784334848)
+2021-11-26 11:39:47,048 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:39:47,048 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:39:47,048 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:39:47,049 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:39:47,049 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:39:47,049 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:39:47,207 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:39:47,238 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:39:47,248 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:39:47,281 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:39:47,312 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:39:47,356 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:39:47,357 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:39:47,392 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:39:47,394 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:39:47,448 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:39:47,449 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:39:47,482 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:39:47,483 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:39:47,524 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:39:47,530 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:39:47,530 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:39:47,531 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:39:47,569 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:39:47,570 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:39:47,629 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:39:48,030 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 11mS.
+2021-11-26 11:39:48,032 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:39:48,252 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:39:49,200 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1168mS.
+2021-11-26 11:39:49,200 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:39:49,201 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
+2021-11-26 11:47:29,339 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 570090904 Bytes (822083584)
+2021-11-26 11:47:30,901 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 327630960 Bytes (822083584)
+2021-11-26 11:47:35,345 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 479211776 Bytes (822083584)
+2021-11-26 11:47:35,477 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:47:35,477 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:47:35,477 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:47:35,478 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:47:35,478 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:47:35,478 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:47:35,617 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:47:35,647 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:47:35,657 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:47:35,690 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:47:35,719 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:47:35,760 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:47:35,761 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:47:35,794 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:47:35,796 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:47:35,846 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:47:35,847 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:47:35,878 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:47:35,879 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:47:35,917 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:47:35,922 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:47:35,922 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:47:35,923 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:47:35,958 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:47:35,959 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:47:36,012 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:47:36,289 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 11:47:36,290 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:47:36,621 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:47:37,511 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1221mS.
+2021-11-26 11:47:37,512 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:47:37,512 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:48:03,396 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:48:19,640 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 11:48:25,098 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 448174560 Bytes (858783744)
+2021-11-26 11:48:26,819 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 637966816 Bytes (858783744)
+2021-11-26 11:48:29,146 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 376133720 Bytes (858783744)
+2021-11-26 11:48:29,257 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:48:29,257 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:48:29,257 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:48:29,257 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:48:29,257 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:48:29,257 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:48:29,364 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:48:29,397 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:48:29,407 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:48:29,443 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:48:29,471 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:48:29,514 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:48:29,515 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:48:29,552 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:48:29,554 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:48:29,608 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:48:29,609 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:48:29,642 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:48:29,644 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:48:29,684 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:48:29,691 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:48:29,691 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:48:29,692 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:48:29,729 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:48:29,730 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:48:29,855 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:48:30,210 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 9mS.
+2021-11-26 11:48:30,211 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:48:30,376 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:48:31,317 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1106mS.
+2021-11-26 11:48:31,317 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:48:31,317 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:49:25,981 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 312466528 Bytes (858783744)
+2021-11-26 11:49:28,145 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 403166304 Bytes (858783744)
+2021-11-26 11:49:33,720 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 467655776 Bytes (858783744)
+2021-11-26 11:49:33,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:49:33,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:49:33,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:49:33,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:49:33,889 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:49:33,889 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:49:34,026 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:49:34,056 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:49:34,065 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:49:34,097 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:49:34,122 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:49:34,162 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:49:34,162 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:49:34,194 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:49:34,196 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:49:34,250 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:49:34,250 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:49:34,292 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:49:34,293 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:49:34,330 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:49:34,336 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:49:34,336 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:49:34,337 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:49:34,372 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:49:34,373 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:49:34,425 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:49:34,826 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 11:49:34,827 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:49:35,020 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:49:35,814 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 987mS.
+2021-11-26 11:49:35,814 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:49:35,815 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:51:38,290 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 505994752 Bytes (858783744)
+2021-11-26 11:51:39,421 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 391349296 Bytes (858783744)
+2021-11-26 11:51:40,884 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 444940880 Bytes (858783744)
+2021-11-26 11:51:40,995 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:51:40,995 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:51:40,995 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:51:40,996 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:51:40,996 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:51:40,996 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:51:41,102 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:51:41,133 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:51:41,142 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:51:41,175 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:51:41,200 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:51:41,241 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:51:41,241 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:51:41,273 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:51:41,275 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:51:41,399 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:51:41,400 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:51:41,432 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:51:41,433 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:51:41,470 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:51:41,476 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:51:41,476 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:51:41,477 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:51:41,512 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:51:41,513 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:51:41,565 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:51:41,898 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 11:51:41,899 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:51:42,060 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:51:42,912 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1013mS.
+2021-11-26 11:51:42,912 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:51:42,913 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:52:17,246 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 353112392 Bytes (858783744)
+2021-11-26 11:52:33,798 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 280927736 Bytes (858783744)
+2021-11-26 11:52:35,034 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 343795328 Bytes (858783744)
+2021-11-26 11:52:35,168 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 11:52:35,168 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 11:52:35,168 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 11:52:35,168 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 11:52:35,168 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 11:52:35,168 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 11:52:35,272 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 11:52:35,303 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 11:52:35,311 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 11:52:35,342 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 11:52:35,366 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 11:52:35,407 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 11:52:35,407 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 11:52:35,439 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 11:52:35,440 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 11:52:35,488 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 11:52:35,489 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 11:52:35,519 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 11:52:35,520 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 11:52:35,559 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 11:52:35,565 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 11:52:35,565 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 11:52:35,566 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 11:52:35,665 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 11:52:35,666 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 11:52:35,718 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 11:52:36,053 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 7mS.
+2021-11-26 11:52:36,054 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 11:52:36,216 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 11:52:37,043 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 989mS.
+2021-11-26 11:52:37,043 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 11:52:37,044 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
