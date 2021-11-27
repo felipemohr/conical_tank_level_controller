@@ -60,7 +60,7 @@ int main()
 
   }
 
-  pump_pid_controller.setKPID(20.0, 0.000014, 0.0);
+  pump_pid_controller.setKPID(22.0, 0.000015, 0.0);
   pump_pid_controller.setPIDLimits(0.0f, 1.0f);
   pump_pid_controller.setSetpoint(desired_height/100);
 

@@ -5243,3 +5243,660 @@
 2021-11-26 17:11:44,010 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1035mS.
 2021-11-26 17:11:44,010 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
 2021-11-26 17:11:44,010 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 18:44:41,996 [INFO] NvicIntPanel:96 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x177,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-11-26 18:59:34,947 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 615434352 Bytes (970981376)
+2021-11-26 18:59:36,669 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 632211568 Bytes (970981376)
+2021-11-26 18:59:38,391 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 723854744 Bytes (970981376)
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-26 18:59:38,531 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 18:59:38,532 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 18:59:38,684 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 18:59:38,715 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 18:59:38,726 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 18:59:38,758 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 18:59:38,832 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 18:59:38,872 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 18:59:38,872 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 18:59:38,903 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 18:59:38,904 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 18:59:38,959 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 18:59:38,959 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 18:59:38,989 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 18:59:38,990 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 18:59:39,025 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 18:59:39,030 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 18:59:39,030 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 18:59:39,031 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 18:59:39,064 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 18:59:39,065 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 18:59:39,128 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 18:59:39,390 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 18:59:39,391 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 18:59:39,717 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 18:59:40,462 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1071mS.
+2021-11-26 18:59:40,462 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 18:59:40,462 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:10:12,547 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 605553976 Bytes (987758592)
+2021-11-26 19:10:14,322 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 622853432 Bytes (987758592)
+2021-11-26 19:10:17,945 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 704642360 Bytes (987758592)
+2021-11-26 19:10:18,066 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 19:10:18,066 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:10:18,066 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:10:18,066 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:10:18,067 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:10:18,067 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 19:10:18,067 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 19:10:18,067 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-26 19:10:18,067 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 19:10:18,067 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 19:10:18,275 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 19:10:18,308 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 19:10:18,320 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 19:10:18,374 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 19:10:18,449 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 19:10:18,489 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 19:10:18,489 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 19:10:18,520 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 19:10:18,522 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 19:10:18,577 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 19:10:18,578 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 19:10:18,607 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 19:10:18,608 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 19:10:18,643 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 19:10:18,648 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 19:10:18,648 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 19:10:18,649 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 19:10:18,683 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 19:10:18,683 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 19:10:18,747 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 19:10:19,012 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 19:10:19,013 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 19:10:19,340 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 19:10:19,998 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 985mS.
+2021-11-26 19:10:19,998 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:10:19,998 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:13:55,272 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 19:13:55,272 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 19:13:55,315 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 19:13:55,316 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 19:13:55,316 [WARN] ThirdParty:813 - waiting for thirdparty lock release [close project]
+2021-11-26 19:13:55,316 [INFO] ThirdParty:815 - entering critical section [close project]
+2021-11-26 19:13:55,316 [INFO] ThirdParty:825 - exiting critical section [close project]
+2021-11-26 19:13:55,316 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 19:13:55,317 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 326439656 Bytes (987758592)
+2021-11-26 19:13:55,318 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 19:13:55,318 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 19:13:55,318 [INFO] OpenFileManager:313 - Change cursor
+2021-11-26 19:13:55,340 [INFO] RulesReader:57 - Compatibility file has been processed (242 Rules)
+2021-11-26 19:13:55,532 [INFO] Context:592 - Trying to add GPIOservice into a context  which must be forbidden
+2021-11-26 19:13:55,599 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 19:13:55,599 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 19:13:55,599 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 19:13:55,599 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:181 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,599 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,600 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:13:55,602 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2021-11-26 19:13:55,602 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2021-11-26 19:13:55,602 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2021-11-26 19:13:55,646 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 354108000 Bytes (987758592)
+2021-11-26 19:13:55,647 [WARN] ThirdParty:779 - waiting for thirdparty lock release [change project]
+2021-11-26 19:13:55,647 [INFO] ThirdParty:781 - entering critical section [change project]
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-11-26 19:13:55,647 [INFO] ThirdParty:787 - exiting critical section [change project]
+2021-11-26 19:13:55,690 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 19:13:55,690 [INFO] PinOutPanel:1463 - setPackage(STM32F103C8Tx,LQFP48)
+2021-11-26 19:13:55,854 [INFO] UtilMem:74 - Before build in PCC Used Memory: 441415776 Bytes (987758592)
+2021-11-26 19:13:55,940 [INFO] UtilMem:74 - After build in PCC Used Memory: 482832480 Bytes (987758592)
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,949 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,950 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,951 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,951 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,951 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,951 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,951 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,952 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,952 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,952 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,952 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:13:55,958 [INFO] OpenFileManager:333 - Restore cursor
+2021-11-26 19:29:25,343 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 19:29:25,344 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 19:29:25,403 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 19:29:25,403 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 19:29:25,403 [WARN] ThirdParty:813 - waiting for thirdparty lock release [close project]
+2021-11-26 19:29:25,403 [INFO] ThirdParty:815 - entering critical section [close project]
+2021-11-26 19:29:25,403 [INFO] ThirdParty:825 - exiting critical section [close project]
+2021-11-26 19:29:25,404 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 19:29:25,405 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 775813120 Bytes (987758592)
+2021-11-26 19:29:25,405 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 19:29:25,405 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 19:29:25,405 [INFO] OpenFileManager:313 - Change cursor
+2021-11-26 19:29:25,696 [INFO] Context:592 - Trying to add GPIOservice into a context  which must be forbidden
+2021-11-26 19:29:25,763 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 19:29:25,763 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 19:29:25,763 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 19:29:25,763 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 19:29:25,763 [WARN] ModelIntegratedComponent:181 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-11-26 19:29:25,763 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,763 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,763 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,763 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,763 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,764 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 19:29:25,766 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2021-11-26 19:29:25,766 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2021-11-26 19:29:25,767 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2021-11-26 19:29:25,816 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 287769336 Bytes (987758592)
+2021-11-26 19:29:25,816 [WARN] ThirdParty:779 - waiting for thirdparty lock release [change project]
+2021-11-26 19:29:25,816 [INFO] ThirdParty:781 - entering critical section [change project]
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-11-26 19:29:25,816 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-11-26 19:29:25,817 [INFO] ThirdParty:787 - exiting critical section [change project]
+2021-11-26 19:29:25,889 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 19:29:25,890 [INFO] PinOutPanel:1463 - setPackage(STM32F103C8Tx,LQFP48)
+2021-11-26 19:29:26,073 [INFO] UtilMem:74 - Before build in PCC Used Memory: 302882512 Bytes (987758592)
+2021-11-26 19:29:26,170 [INFO] UtilMem:74 - After build in PCC Used Memory: 344299216 Bytes (987758592)
+2021-11-26 19:29:26,178 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,179 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,180 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,181 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,182 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 19:29:26,188 [INFO] OpenFileManager:333 - Restore cursor
+2021-11-26 19:54:49,813 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 743220760 Bytes (987758592)
+2021-11-26 19:55:13,375 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 483917744 Bytes (987758592)
+2021-11-26 19:55:14,431 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 512229296 Bytes (987758592)
+2021-11-26 19:55:16,027 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 653787056 Bytes (987758592)
+2021-11-26 19:55:16,138 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 19:55:16,138 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:16,138 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:16,139 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:16,139 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:16,139 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 19:55:16,139 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 19:55:16,139 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-26 19:55:16,139 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 19:55:16,139 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 19:55:16,262 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 19:55:16,292 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 19:55:16,373 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 19:55:16,404 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 19:55:16,477 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 19:55:16,517 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 19:55:16,518 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 19:55:16,549 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 19:55:16,550 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 19:55:16,606 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 19:55:16,607 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 19:55:16,636 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 19:55:16,637 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 19:55:16,671 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 19:55:16,677 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 19:55:16,677 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 19:55:16,678 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 19:55:16,711 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 19:55:16,711 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 19:55:16,775 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 19:55:17,098 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 7mS.
+2021-11-26 19:55:17,099 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 19:55:17,253 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 19:55:17,254 [INFO] ApiDbMcu:468 - Load IP Config File for FATFS
+2021-11-26 19:55:17,256 [INFO] ApiDbMcu:468 - Load IP Config File for FREERTOS
+2021-11-26 19:55:17,259 [INFO] ApiDbMcu:468 - Load IP Config File for USB_DEVICE
+2021-11-26 19:55:18,052 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 953mS.
+2021-11-26 19:55:18,053 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 1mS.
+2021-11-26 19:55:18,053 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:55:29,060 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 349018064 Bytes (1033895936)
+2021-11-26 19:55:29,984 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 365256376 Bytes (1033895936)
+2021-11-26 19:55:32,350 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 401467696 Bytes (1033895936)
+2021-11-26 19:55:32,499 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 19:55:32,499 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:32,499 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:32,499 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:32,500 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:55:32,500 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 19:55:32,500 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 19:55:32,500 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-26 19:55:32,500 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 19:55:32,500 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 19:55:32,644 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 19:55:32,674 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 19:55:32,684 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 19:55:32,715 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 19:55:32,787 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 19:55:32,828 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 19:55:32,829 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 19:55:32,860 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 19:55:32,861 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 19:55:32,916 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 19:55:32,917 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 19:55:32,946 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 19:55:32,947 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 19:55:32,983 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 19:55:32,988 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 19:55:32,988 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 19:55:32,989 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 19:55:33,022 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 19:55:33,022 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 19:55:33,087 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 19:55:33,498 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 7mS.
+2021-11-26 19:55:33,499 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 19:55:33,652 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 19:55:34,420 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 921mS.
+2021-11-26 19:55:34,420 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:55:34,421 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:58:58,345 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 455991200 Bytes (1033895936)
+2021-11-26 19:59:01,215 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 513662880 Bytes (1033895936)
+2021-11-26 19:59:03,455 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 582868896 Bytes (1033895936)
+2021-11-26 19:59:03,570 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 19:59:03,570 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:59:03,570 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:59:03,570 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:59:03,570 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 19:59:03,570 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 19:59:03,571 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 19:59:03,571 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-26 19:59:03,571 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 19:59:03,571 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 19:59:03,692 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 19:59:03,723 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 19:59:03,735 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 19:59:03,806 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 19:59:03,927 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 19:59:03,967 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 19:59:03,968 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 19:59:03,999 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 19:59:04,001 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 19:59:04,057 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 19:59:04,057 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 19:59:04,087 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 19:59:04,088 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 19:59:04,123 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 19:59:04,129 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 19:59:04,129 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 19:59:04,130 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 19:59:04,164 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 19:59:04,165 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 19:59:04,217 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 19:59:04,567 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 19:59:04,567 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 19:59:04,727 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 19:59:05,574 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1007mS.
+2021-11-26 19:59:05,574 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 19:59:05,575 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 20:00:25,245 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 20:00:25,246 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 20:00:25,289 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 20:00:25,289 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 20:00:25,290 [WARN] ThirdParty:813 - waiting for thirdparty lock release [close project]
+2021-11-26 20:00:25,290 [INFO] ThirdParty:815 - entering critical section [close project]
+2021-11-26 20:00:25,290 [INFO] ThirdParty:825 - exiting critical section [close project]
+2021-11-26 20:00:25,290 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 20:00:25,291 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 751121256 Bytes (1033895936)
+2021-11-26 20:00:25,291 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 20:00:25,291 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 20:00:25,291 [INFO] OpenFileManager:313 - Change cursor
+2021-11-26 20:00:25,296 [INFO] RulesReader:57 - Compatibility file has been processed (242 Rules)
+2021-11-26 20:00:25,507 [INFO] Context:592 - Trying to add GPIOservice into a context  which must be forbidden
+2021-11-26 20:00:25,574 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 20:00:25,574 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 20:00:25,575 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 20:00:25,575 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:181 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,575 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,576 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,577 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,577 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,577 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,577 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 20:00:25,579 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2021-11-26 20:00:25,579 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2021-11-26 20:00:25,579 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2021-11-26 20:00:25,622 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 661351344 Bytes (1033895936)
+2021-11-26 20:00:25,623 [WARN] ThirdParty:779 - waiting for thirdparty lock release [change project]
+2021-11-26 20:00:25,623 [INFO] ThirdParty:781 - entering critical section [change project]
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-11-26 20:00:25,623 [INFO] ThirdParty:787 - exiting critical section [change project]
+2021-11-26 20:00:25,661 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 20:00:25,662 [INFO] PinOutPanel:1463 - setPackage(STM32F103C8Tx,LQFP48)
+2021-11-26 20:00:25,807 [INFO] UtilMem:74 - Before build in PCC Used Memory: 321067656 Bytes (1033895936)
+2021-11-26 20:00:25,969 [INFO] UtilMem:74 - After build in PCC Used Memory: 362484360 Bytes (1033895936)
+2021-11-26 20:00:25,978 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,979 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,980 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,981 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,981 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,981 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,981 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,981 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 20:00:25,987 [INFO] OpenFileManager:333 - Restore cursor
+2021-11-26 20:08:26,733 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 883610864 Bytes (1033895936)
+2021-11-26 20:08:31,696 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 291532288 Bytes (1033895936)
+2021-11-26 20:08:33,859 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 376989184 Bytes (1033895936)
+2021-11-26 20:08:34,000 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-26 20:08:34,000 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 20:08:34,000 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 20:08:34,000 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 20:08:34,000 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-26 20:08:34,000 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-26 20:08:34,001 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-26 20:08:34,001 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-26 20:08:34,001 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-26 20:08:34,001 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-26 20:08:34,181 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-26 20:08:34,211 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-26 20:08:34,228 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-26 20:08:34,259 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-26 20:08:34,332 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-26 20:08:34,373 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-26 20:08:34,373 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-26 20:08:34,404 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-26 20:08:34,406 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-26 20:08:34,462 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-26 20:08:34,462 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-26 20:08:34,492 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-26 20:08:34,493 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-26 20:08:34,529 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-26 20:08:34,534 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-26 20:08:34,535 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-26 20:08:34,536 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-26 20:08:34,570 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-26 20:08:34,570 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-26 20:08:34,635 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-26 20:08:35,047 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 8mS.
+2021-11-26 20:08:35,048 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-26 20:08:35,256 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-26 20:08:35,257 [INFO] ApiDbMcu:468 - Load IP Config File for FATFS
+2021-11-26 20:08:35,259 [INFO] ApiDbMcu:468 - Load IP Config File for FREERTOS
+2021-11-26 20:08:35,261 [INFO] ApiDbMcu:468 - Load IP Config File for USB_DEVICE
+2021-11-26 20:08:36,002 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 954mS.
+2021-11-26 20:08:36,002 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 20:08:36,002 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-26 21:11:30,383 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 21:11:30,383 [INFO] MainUpdater:2671 - connection check result : 10
+2021-11-26 21:11:30,437 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 21:11:30,438 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 21:11:30,438 [WARN] ThirdParty:813 - waiting for thirdparty lock release [close project]
+2021-11-26 21:11:30,438 [INFO] ThirdParty:815 - entering critical section [close project]
+2021-11-26 21:11:30,438 [INFO] ThirdParty:825 - exiting critical section [close project]
+2021-11-26 21:11:30,438 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 21:11:30,439 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 454023280 Bytes (1033895936)
+2021-11-26 21:11:30,440 [INFO] MicroXplorer:448 - Change Database Path : 
+2021-11-26 21:11:30,440 [INFO] MicroXplorer:478 - Change Database Version : DB.6.0.30
+2021-11-26 21:11:30,440 [INFO] OpenFileManager:313 - Change cursor
+2021-11-26 21:11:30,448 [INFO] RulesReader:57 - Compatibility file has been processed (242 Rules)
+2021-11-26 21:11:30,675 [INFO] Context:592 - Trying to add GPIOservice into a context  which must be forbidden
+2021-11-26 21:11:30,739 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 21:11:30,739 [INFO] RtosManager:484 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 21:11:30,739 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-11-26 21:11:30,739 [INFO] RtosManager:484 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:181 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,739 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,740 [WARN] ModelIntegratedComponent:60 - No mode defined for component null
+2021-11-26 21:11:30,742 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2021-11-26 21:11:30,742 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (MCOFreq_Value) has invalid value (72000000)
+2021-11-26 21:11:30,742 [INFO] ImportTextPane:167 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
+2021-11-26 21:11:30,789 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 310456536 Bytes (1033895936)
+2021-11-26 21:11:30,789 [WARN] ThirdParty:779 - waiting for thirdparty lock release [change project]
+2021-11-26 21:11:30,789 [INFO] ThirdParty:781 - entering critical section [change project]
+2021-11-26 21:11:30,789 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-11-26 21:11:30,789 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-11-26 21:11:30,789 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-11-26 21:11:30,789 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:967 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-11-26 21:11:30,790 [INFO] ThirdParty:787 - exiting critical section [change project]
+2021-11-26 21:11:30,847 [INFO] PinOutPanel:1463 - setPackage(No Configuration,No Configuration)
+2021-11-26 21:11:30,847 [INFO] PinOutPanel:1463 - setPackage(STM32F103C8Tx,LQFP48)
+2021-11-26 21:11:30,968 [INFO] UtilMem:74 - Before build in PCC Used Memory: 321024408 Bytes (1033895936)
+2021-11-26 21:11:31,096 [INFO] UtilMem:74 - After build in PCC Used Memory: 389704088 Bytes (1033895936)
+2021-11-26 21:11:31,104 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,104 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,105 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,106 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,108 [INFO] IPUIPlugin:74 - create IPUIPlugin
+2021-11-26 21:11:31,114 [INFO] OpenFileManager:333 - Restore cursor
