@@ -68,6 +68,10 @@ void Error_Handler(void);
 #define TRIG_GPIO_Port GPIOB
 #define ECHO_Pin GPIO_PIN_11
 #define ECHO_GPIO_Port GPIOB
+#define VALVE_DIR_Pin GPIO_PIN_12
+#define VALVE_DIR_GPIO_Port GPIOB
+#define VALVE_PWM_Pin GPIO_PIN_13
+#define VALVE_PWM_GPIO_Port GPIOB
 #define PUMP_PWM_Pin GPIO_PIN_15
 #define PUMP_PWM_GPIO_Port GPIOB
 #define LCD_RS_Pin GPIO_PIN_8

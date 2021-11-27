@@ -53,6 +53,7 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 void sendData(HeightSensor usensor);
+void setInitialValveOpening();
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -145,12 +146,15 @@ int main(void)
 
   HeightSensor usensor(TRIG_GPIO_Port, TRIG_Pin, ECHO_GPIO_Port, ECHO_Pin, htim2);
   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
   HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_SET);
   HAL_TIM_Base_Start_IT(&htim4);
 
   pump_pid_controller.setKPID(22.0, 0.000015, 0.0);
   pump_pid_controller.setPIDLimits(0.0f, 1.0f);
   pump_pid_controller.setSetpoint(setpoint);
+
+  setInitialValveOpening();
 
   startMillis = HAL_GetTick();
   /* USER CODE END 2 */
@@ -338,6 +342,11 @@ static void MX_TIM1_Init(void)
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
   sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_SET;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
@@ -548,7 +557,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, TRIG_Pin|PUMP_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, TRIG_Pin|VALVE_DIR_Pin|PUMP_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, LCD_RS_Pin|LCD_EN_Pin|LCD_D4_Pin|LCD_D5_Pin
@@ -567,8 +576,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(SETPOINT_BUT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : TRIG_Pin PUMP_EN_Pin */
-  GPIO_InitStruct.Pin = TRIG_Pin|PUMP_EN_Pin;
+  /*Configure GPIO pins : TRIG_Pin VALVE_DIR_Pin PUMP_EN_Pin */
+  GPIO_InitStruct.Pin = TRIG_Pin|VALVE_DIR_Pin|PUMP_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -617,6 +626,17 @@ void sendData(HeightSensor usensor)
 					setpoint, pidVal);
 	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
 }
+
+void setInitialValveOpening()
+{
+	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_RESET);
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
+	HAL_Delay(8000);
+	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_SET);
+	HAL_Delay(4000);
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 0);
+}
+
 /* USER CODE END 4 */
 
 /**
