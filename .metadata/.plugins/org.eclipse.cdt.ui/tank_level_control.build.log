@@ -1,8 +1,20 @@
-21:49:15 **** Incremental Build of configuration Debug for project tank_level_control ****
+03:40:59 **** Incremental Build of configuration Debug for project tank_level_control ****
 make -j12 all 
 arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.cpp: In function 'void sendData(HeightSensor)':
+../Core/Src/main.cpp:614:20: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  614 |  sprintf(buffer, "%d,%.2f,%.2f,%.2f,%.2f,%.2f\n",
+      |                   ~^
+      |                    |
+      |                    int
+      |                   %ld
+  615 |      HAL_GetTick() - startMillis, usensor.getDistRaw(),
+      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    |
+      |                    uint32_t {aka long unsigned int}
 In file included from ../Core/Src/height_sensor/HeightSensor.h:12,
                  from ../Core/Src/main.cpp:26:
+../Core/Inc/fir_coeffs.h: At global scope:
 ../Core/Inc/fir_coeffs.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
     3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
       |              ^~~~~~~~~~
@@ -13,7 +25,7 @@ arm-none-eabi-size   tank_level_control.elf
 arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
 arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
    text	   data	    bss	    dec	    hex	filename
-  34344	    748	   2044	  37136	   9110	tank_level_control.elf
+  35936	    748	   2116	  38800	   9790	tank_level_control.elf
 Finished building: default.size.stdout
  
 Finished building: tank_level_control.bin
@@ -21,5 +33,5 @@ Finished building: tank_level_control.bin
 Finished building: tank_level_control.list
  
 
-21:49:15 Build Finished. 0 errors, 1 warnings. (took 788ms)
+03:41:00 Build Finished. 0 errors, 2 warnings. (took 785ms)
 

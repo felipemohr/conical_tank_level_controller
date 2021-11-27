@@ -5900,3 +5900,46 @@
 2021-11-26 21:11:31,107 [INFO] IPUIPlugin:74 - create IPUIPlugin
 2021-11-26 21:11:31,108 [INFO] IPUIPlugin:74 - create IPUIPlugin
 2021-11-26 21:11:31,114 [INFO] OpenFileManager:333 - Restore cursor
+2021-11-27 01:29:54,257 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 459041056 Bytes (723517440)
+2021-11-27 01:29:55,782 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 474164984 Bytes (723517440)
+2021-11-27 01:29:57,287 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 562771704 Bytes (723517440)
+2021-11-27 01:29:57,442 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: NVIC
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: USART
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: TIM1_8F1
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: SYS
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: GPIO
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: ADC
+2021-11-27 01:29:57,443 [INFO] BlockDiagram:2740 - set Specific Code input for plugin: RCC
+2021-11-27 01:29:57,444 [INFO] CodeGenerator:663 - code generatio: config db path: /opt/st/stm32cubeide_1.7.0/plugins/com.st.stm32cube.common.mx_6.3.0.202107141111//db/
+2021-11-27 01:29:57,736 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp_save
+2021-11-27 01:29:57,787 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/license.tmp
+2021-11-27 01:29:57,829 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp_save
+2021-11-27 01:29:57,862 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/gpio.tmp
+2021-11-27 01:29:57,961 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c_save
+2021-11-27 01:29:58,002 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_it.c
+2021-11-27 01:29:58,003 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h_save
+2021-11-27 01:29:58,035 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_it.h
+2021-11-27 01:29:58,036 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c_save
+2021-11-27 01:29:58,099 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/stm32f1xx_hal_msp.c
+2021-11-27 01:29:58,100 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp_save
+2021-11-27 01:29:58,130 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/MXTmpFiles/system.tmp
+2021-11-27 01:29:58,132 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h_save
+2021-11-27 01:29:58,167 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/stm32f1xx_hal_conf.h
+2021-11-27 01:29:58,173 [WARN] IPConfigManager:3148 - IP not found : TIM
+2021-11-27 01:29:58,173 [WARN] CodeGenerator:3268 - IP not found : null
+2021-11-27 01:29:58,174 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h_save
+2021-11-27 01:29:58,208 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Inc/main.h
+2021-11-27 01:29:58,209 [INFO] CodeEngine:239 - oldGeneratedFile, /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c_save
+2021-11-27 01:29:58,321 [INFO] CodeEngine:257 - Generated code: /home/senai/conical_tank_level_controller/tank_level_control/Core/Src/main.c
+2021-11-27 01:29:58,661 [INFO] ProjectBuilder:2578 - Time for Copy HAL[1] : 11mS.
+2021-11-27 01:29:58,662 [INFO] ProjectBuilder:3622 - Project Generator version: 3.14.1
+2021-11-27 01:29:58,821 [INFO] ConfigFileManager:1271 - The Die is : DIE410
+2021-11-27 01:29:58,822 [INFO] ApiDbMcu:468 - Load IP Config File for FATFS
+2021-11-27 01:29:58,824 [INFO] ApiDbMcu:468 - Load IP Config File for FREERTOS
+2021-11-27 01:29:58,827 [INFO] ApiDbMcu:468 - Load IP Config File for USB_DEVICE
+2021-11-27 01:29:59,686 [INFO] ProjectBuilder:3789 - Time for Generating toolchain IDE Files: 1024mS.
+2021-11-27 01:29:59,686 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
+2021-11-27 01:29:59,686 [INFO] ProjectBuilder:2457 - Time for Copy CMSIS : 0mS.
