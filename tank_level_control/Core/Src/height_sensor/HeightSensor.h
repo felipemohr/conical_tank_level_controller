@@ -11,7 +11,7 @@
 #include "stm32f1xx_hal.h"
 #include "fir_coeffs.h"
 
-#define CONE_HEIGHT 70.0f
+#define CONE_HEIGHT 67.0f
 
 struct FIRFilter
 {

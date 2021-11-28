@@ -8,4 +8,5 @@ PIDController.cpp:41:6:void PIDController::setKi(float)	16	static
 PIDController.cpp:46:6:void PIDController::setKd(float)	16	static
 PIDController.cpp:51:6:void PIDController::setSetpoint(float)	16	static
 PIDController.cpp:56:6:void PIDController::setPIDLimits(float, float)	24	static
-PIDController.cpp:62:7:float PIDController::processPID(float)	24	static
+PIDController.cpp:62:7:float PIDController::getError()	16	static
+PIDController.cpp:67:7:float PIDController::processPID(float)	24	static

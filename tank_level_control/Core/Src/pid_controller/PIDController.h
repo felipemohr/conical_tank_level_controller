@@ -11,6 +11,7 @@
 class PIDController
 {
 private:
+
   float _kp = 1.0;
   float _ki = 0.0;
   float _kd = 0.0;
@@ -45,6 +46,8 @@ public:
   void setSetpoint(float setpoint);
   void setPIDLimits(float min, float max);
   float processPID(float curr_point);
+
+  float getError();
 
   void millisTicker(void);
 

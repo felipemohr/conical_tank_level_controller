@@ -59,18 +59,23 @@ void PIDController::setPIDLimits(float min, float max)
   this->_pid_max = max;
 }
 
+float PIDController::getError()
+{
+  return this->_error;
+}
+
 float PIDController::processPID(float curr_point)
 {
-  this->_curr_time = this->_millis / 1000;
+  this->_curr_time = this->_millis / 1000.0;
   this->_delta_time = this->_curr_time - this->_last_time;
 
   this->_error = this->_setpoint - curr_point;
   this->_sum_error  += this->_error;
-  this->_delta_error = this->_error - this->_last_error;
+  this->_delta_error = this->_last_error - this->_error;
 
   this->_pid_result  = this->_kp * this->_error
-                     + this->_ki * this->_sum_error * this->_curr_time;
-                    //  + this->_kd * this->_delta_error / this->_delta_time;
+                     + this->_ki * this->_sum_error * this->_delta_time;
+                     + this->_kd * this->_delta_error / this->_delta_time;
 
   this->_last_time = this->_curr_time;
   this->_last_error = this->_error;

@@ -53,7 +53,9 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 void sendData(HeightSensor usensor);
-void setInitialValveOpening();
+void closeValve();
+void fillTank();
+void openValve();
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -129,8 +131,9 @@ int main(void)
 
   HAL_ADC_Start(&hadc1);
 
-  HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_SET);
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
   __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 0);
+  HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_SET);
 
   while(!HAL_GPIO_ReadPin(SETPOINT_BUT_GPIO_Port, SETPOINT_BUT_Pin))
   {
@@ -145,18 +148,30 @@ int main(void)
   }
 
   HeightSensor usensor(TRIG_GPIO_Port, TRIG_Pin, ECHO_GPIO_Port, ECHO_Pin, htim2);
-  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
-  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+
   HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_SET);
   HAL_TIM_Base_Start_IT(&htim4);
 
-  pump_pid_controller.setKPID(22.0, 0.000015, 0.0);
+  pump_pid_controller.setKPID(1.319, 0.02405, 0.0);
   pump_pid_controller.setPIDLimits(0.0f, 1.0f);
   pump_pid_controller.setSetpoint(setpoint);
 
-  setInitialValveOpening();
+  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+
+  closeValve();
+  if (setpoint > 0.50) fillTank();
+
+  lcd16x2_clear();
+  lcd16x2_printf("Okay! Pressione");
+  lcd16x2_2ndLine();
+  lcd16x2_printf("novamente");
+  while (!HAL_GPIO_ReadPin(SETPOINT_BUT_GPIO_Port, SETPOINT_BUT_Pin));
+
+  openValve();
+
 
   startMillis = HAL_GetTick();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -170,27 +185,29 @@ int main(void)
 	usensor.readSensor();
 
 	pidVal = pump_pid_controller.processPID(usensor.getWaterHeight()/100);
-	if (pidVal < 0.3)
+	if (pidVal < 0.25)
 	{
 		HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_RESET);
-		pwmVal = 0;
+		pidVal = 0.0;
 	}
 	else
 	{
 		HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_RESET);
 		pwmVal = 625*pidVal;
 	}
+
+	pwmVal = 625*pidVal;
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, pwmVal);
+
+
 
 	if (updateLCD)
 	{
 		lcd16x2_clear();
 		lcd16x2_1stLine();
-		//lcd16x2_printf("Setpoint: %.1fcm", setpoint*100);
-		lcd16x2_printf("H: %.1fcm", usensor.getWaterHeight());
+		lcd16x2_printf("Setpoint: %.1fcm", setpoint*100);
 		lcd16x2_2ndLine();
-		lcd16x2_printf("PWM: %.2f", pidVal);
-		//lcd16x2_printf("H. atual: %.1fcm", usensor.getWaterHeight());
+		lcd16x2_printf("H. atual: %.1fcm", usensor.getWaterHeight());
 		updateLCD = false;
 	}
 
@@ -606,6 +623,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim == &htim4)
 	{
+		pump_pid_controller.millisTicker();
 		LCDMillisCont++;
 		if (LCDMillisCont > 1000*int(LCD_UPDATE_TIME))
 		{
@@ -627,13 +645,32 @@ void sendData(HeightSensor usensor)
 	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
 }
 
-void setInitialValveOpening()
+void closeValve()
 {
+	lcd16x2_clear();
+	lcd16x2_printf("Fechando Valvula");
 	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_RESET);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
-	HAL_Delay(8000);
+	HAL_Delay(4500);
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 0);
+}
+
+void fillTank()
+{
+	lcd16x2_clear();
+	lcd16x2_printf("Enchendo tanque");
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 625);
+	HAL_Delay(6000);
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 0);
+}
+
+void openValve()
+{
+	lcd16x2_clear();
+	lcd16x2_printf("Abrindo Valvula");
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
 	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_SET);
-	HAL_Delay(4000);
+	HAL_Delay(1600);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 0);
 }
 
