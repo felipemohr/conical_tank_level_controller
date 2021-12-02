@@ -16,7 +16,7 @@ if __name__ == "__main__":
   with open("system1.csv", "a") as data_file:
     data_file.write("millis,dist_raw,dist_filtered,water_height,setpoint,pid_val\n")
     start_time = getMillis()
-    while getMillis() - start_time < 300000:
+    while getMillis() - start_time < 600000:
       data = ser.readline().decode()
       data_file.write(data)
       print(data)

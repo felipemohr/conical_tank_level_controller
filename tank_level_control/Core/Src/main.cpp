@@ -84,6 +84,7 @@ uint16_t LCDMillisCont = 0;
 bool updateLCD = true;
 
 uint32_t startMillis;
+uint32_t startLoopMillis;
 
 
 /* USER CODE END 0 */
@@ -139,7 +140,7 @@ int main(void)
   {
 	  HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
 	  potVal = HAL_ADC_GetValue(&hadc1);
-	  setpoint = 0.35 + 0.30*(potVal/4036.0);
+	  setpoint = 0.3 + 0.32*(potVal/4036.0);
 	  lcd16x2_clear();
 	  lcd16x2_printf("Setpoint: ");
 	  lcd16x2_2ndLine();
@@ -152,23 +153,30 @@ int main(void)
   HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_SET);
   HAL_TIM_Base_Start_IT(&htim4);
 
-  pump_pid_controller.setKPID(1.319, 0.02405, 0.0);
+  pump_pid_controller.setKPID(1.319, 0.02405, 10.785);
   pump_pid_controller.setPIDLimits(0.0f, 1.0f);
   pump_pid_controller.setSetpoint(setpoint);
 
   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
 
   closeValve();
-  if (setpoint > 0.50) fillTank();
+  if (setpoint > 0.55) fillTank();
 
   lcd16x2_clear();
   lcd16x2_printf("Okay! Pressione");
   lcd16x2_2ndLine();
   lcd16x2_printf("novamente");
   while (!HAL_GPIO_ReadPin(SETPOINT_BUT_GPIO_Port, SETPOINT_BUT_Pin));
+  lcd16x2_clear();
+  lcd16x2_printf("Iniciando...");
 
   openValve();
 
+  for (int i=0; i<(FILTER_NUM_COEFFS-1)/2; i++)
+  {
+	  usensor.readSensor();
+	  HAL_Delay(1000/SAMPLING_FREQUENCY);
+  }
 
   startMillis = HAL_GetTick();
 
@@ -182,6 +190,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
+	startLoopMillis = HAL_GetTick();
 	usensor.readSensor();
 
 	pidVal = pump_pid_controller.processPID(usensor.getWaterHeight()/100);
@@ -212,7 +221,7 @@ int main(void)
 	}
 
 	sendData(usensor);
-	HAL_Delay(1000/SAMPLING_FREQUENCY);
+	HAL_Delay(1000/SAMPLING_FREQUENCY - (HAL_GetTick() - startLoopMillis));
   }
   /* USER CODE END 3 */
 }
@@ -638,8 +647,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 void sendData(HeightSensor usensor)
 {
 	char buffer[36];
-	sprintf(buffer, "%d,%.2f,%.2f,%.2f,%.2f,%.2f\n",
-					HAL_GetTick() - startMillis, usensor.getDistRaw(),
+	sprintf(buffer, "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f\n",
+					(HAL_GetTick() - startMillis)/1000.0, usensor.getDistRaw(),
 					usensor.getDistFiltered() ,usensor.getWaterHeight(),
 					setpoint, pidVal);
 	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);

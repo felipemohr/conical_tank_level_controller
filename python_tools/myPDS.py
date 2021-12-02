@@ -149,8 +149,20 @@ def remove_noise(signal, max_amplitude=50):
   return noiseless_signal
 
 
+
 class FIRFilter():
-  def __init__(self, fc, transition_width, stopband_attenuation=20, passband_ripple=0.1, Fs=8e3, window=None):
+
+  def __init__(self, fc, transition_width, stopband_attenuation=20, passband_ripple=0.1, Fs=20e3, window=None):
+    """Class for designing a FIR filter
+
+    Args:
+        fc (int): Cutoff frequency, in Hertz
+        transition_width (int): Transition Width, in Hertz
+        stopband_attenuation (int, optional): Stopband Attenuation, in decibels. Defaults to 20.
+        passband_ripple (float, optional): Passband Ripple, in decibels. Defaults to 0.1.
+        Fs (int): Sampling Frequency, in Hertz. Defaults to 20kHz.
+        window (string, optional): Window function used for filter design. Defaults to None.
+    """
     self._fc = fc
     self._df = transition_width
     self._As = stopband_attenuation
@@ -184,9 +196,10 @@ class FIRFilter():
       N = np.ceil( 5.5/self._dfn )
     else:
       self._window = "kaiser"
+      N = np.ceil((self._As - 7.95)/(14.36*self._dfn))
     if not N%2:
       N += 1
-    self._N = N
+    self._N = int(N)
 
 
   def setWindow(self, window):
@@ -199,21 +212,22 @@ class FIRFilter():
 
   def getWindowFunction(self):
 
+    n = np.array([np.arange(-(self._N-1)/2, self._N/2)])
+    
     if self._window == "rectangular":
-      n = np.array([np.arange(-(self._N-1)/2, self._N/2)])
       W = np.ones(self._N)
 
     elif self._window == "hanning":
-      n = np.array([np.arange(-(self._N-1)/2, self._N/2)])
       W = 0.5 + 0.5*np.cos(2*np.pi*n/self._N)
 
     elif self._window == "hamming":
-      n = np.array([np.arange(-(self._N-1)/2, self._N/2)])
       W = 0.54 + 0.46*np.cos(2*np.pi*n/self._N)
 
     elif self._window == "blackman":
-      n = np.array([np.arange(-(self._N-1)/2, self._N/2)])
       W = 0.42 + 0.5*np.cos(2*np.pi*n/(self._N-1)) + 0.08*np.cos(4*np.pi*n/(self._N-1))
+
+    elif self._window == "kaiser":
+      W = np.kaiser(self._N, 14)
 
     self._W = W
     self._n = n
@@ -225,6 +239,17 @@ class FIRFilter():
     self._b = np.multiply(self._W, hd)
   
 
+  def applyFilter(self, signal, plot=False):
+    y = np.convolve(signal, self._b.reshape(self._N))
+    if plot:
+      plt.figure(1, figsize=(20,12))
+      plt.plot(y)
+      plt.xlabel("Número de amostras")
+      plt.ylabel("Amplitude")
+      plt.title("Sinal filtrado", fontweight="bold")
+    return y
+
+
   def getFilterCoeffs(self):
     return self._b
 
@@ -234,22 +259,37 @@ class FIRFilter():
 
 
   def plotWindow(self):
-    plt.stem(self._n.T, self._W.T)
+    plt.figure(1, figsize=(20,12))
+    plt.stem(self._n.T, self._W.T, use_line_collection=True)
     plt.xlabel("Número de coeficientes")
     plt.ylabel("Amplitude")
-    plt.title("Janela " + self._window)
+    plt.title("Janela " + self._window, fontweight="bold")
 
 
   def plotCoeffs(self):
-    plt.stem(self._n.T, self._b.T)
+    plt.figure(1, figsize=(20,12))
+    plt.stem(self._n.T, self._b.T, use_line_collection=True)
     plt.xlabel("Número de coeficientes")
     plt.ylabel("Amplitude")
-    plt.title("Coeficientes do Filtro FIR (b)")
+    plt.title("Coeficientes do Filtro FIR (b)", fontweight="bold")
+
+
+  def plotFrequencyResponde(self, db=True):
+    wf, hf = freqz(self._b.T, 1, worN=1024, fs=self._Fs)
+    plt.figure(1, figsize=(20,12))
+    if db:
+      plt.plot(wf, 20*np.log10(np.absolute(hf)))
+      plt.ylabel("Ganho (dB)")
+    else:
+      plt.plot(wf, np.absolute(hf))
+      plt.ylabel("Ganho")
+    plt.xlabel("Frequencia (Hz)")
+    plt.title("Resposta em Frequência", fontweight="bold")
 
 
 
 class LowPassFIR(FIRFilter):
-  
+
   def getImpulseResponse(self):
     wcn = 2*np.pi*self._fcn
     nn = np.arange(1, self._N/2)
@@ -267,11 +307,11 @@ class LowPassFIR(FIRFilter):
     return self._b
 
   def plotFilter(self):
-    plt.stem(self._n.T, self._hd.T)
+    plt.figure(1, figsize=(20,12))
+    plt.stem(self._n.T, self._hd.T, use_line_collection=True)
     plt.xlabel("Número de coeficientes")
     plt.ylabel("Amplitude")
-    plt.title("Filtro Passa Baixas ideal")
-
+    plt.title("Filtro Passa Baixas ideal", fontweight="bold")
 
 
 class HighPassFIR(FIRFilter):
@@ -293,15 +333,27 @@ class HighPassFIR(FIRFilter):
     return self._b
 
   def plotFilter(self):
-    plt.stem(self._n.T, self._hd.T)
+    plt.figure(1, figsize=(20,12))
+    plt.stem(self._n.T, self._hd.T, use_line_collection=True)
     plt.xlabel("Número de coeficientes")
     plt.ylabel("Amplitude")
-    plt.title("Filtro Passa Altas ideal")
-
+    plt.title("Filtro Passa Altas ideal", fontweight="bold")
 
 
 class BandPassFIR(FIRFilter):
+
   def __init__(self, fc1, fc2, transition_width, stopband_attenuation=20, passband_ripple=0.1, Fs=8e3, window=None):
+    """Class for designing a BandPass FIR filter
+
+    Args:
+        fc1 (int): Lowest cutoff frequency, in Hertz
+        fc2 (int): Highest cutoff frequency, in Hertz
+        transition_width (int): Transition Width, in Hertz
+        stopband_attenuation (int, optional): Stopband Attenuation, in decibels. Defaults to 20.
+        passband_ripple (float, optional): Passband Ripple, in decibels. Defaults to 0.1.
+        Fs (int): Sampling Frequency, in Hertz. Defaults to 20kHz.
+        window (string, optional): Window function used for filter design. Defaults to None.
+    """
     super().__init__(fc1, transition_width, stopband_attenuation, passband_ripple, Fs, window)
     self._fc1 = fc1
     self._fc2 = fc2
@@ -313,7 +365,7 @@ class BandPassFIR(FIRFilter):
     wc2n = 2*np.pi*self._fc2n
     nn = np.arange(1, self._N/2)
     hd0 = np.array([[2*(self._fc2n - self._fc1n)]])
-    hdr = 2*self._fcn2*np.sin(nn*wc2n)/(nn*wc2n) - 2*self._fcn1*np.sin(nn*wc1n)/(nn*wc1n)
+    hdr = 2*self._fc2n*np.sin(nn*wc2n)/(nn*wc2n) - 2*self._fc1n*np.sin(nn*wc1n)/(nn*wc1n)
     hdr = np.array([hdr])
     hdl = np.flip(hdr)
     self._hd = np.concatenate((hdl, hd0, hdr), axis=1)
@@ -326,15 +378,27 @@ class BandPassFIR(FIRFilter):
     return self._b
 
   def plotFilter(self):
-    plt.stem(self._n.T, self._hd.T)
+    plt.figure(1, figsize=(20,12))
+    plt.stem(self._n.T, self._hd.T, use_line_collection=True)
     plt.xlabel("Número de coeficientes")
     plt.ylabel("Amplitude")
-    plt.title("Filtro Passa Faixa ideal")
-
+    plt.title("Filtro Passa Faixa ideal", fontweight="bold")
 
 
 class BandStopFIR(FIRFilter):
+
   def __init__(self, fc1, fc2, transition_width, stopband_attenuation=20, passband_ripple=0.1, Fs=8e3, window=None):
+    """Class for designing a BandStop FIR filter
+
+    Args:
+        fc1 (int): Lowest cutoff frequency, in Hertz
+        fc2 (int): Highest cutoff frequency, in Hertz
+        transition_width (int): Transition Width, in Hertz
+        stopband_attenuation (int, optional): Stopband Attenuation, in decibels. Defaults to 20.
+        passband_ripple (float, optional): Passband Ripple, in decibels. Defaults to 0.1.
+        Fs (int): Sampling Frequency, in Hertz. Defaults to 20kHz.
+        window (string, optional): Window function used for filter design. Defaults to None.
+    """
     super().__init__(fc1, transition_width, stopband_attenuation, passband_ripple, Fs, window)
     self._fc1 = fc1
     self._fc2 = fc2
@@ -346,7 +410,7 @@ class BandStopFIR(FIRFilter):
     wc2n = 2*np.pi*self._fc2n
     nn = np.arange(1, self._N/2)
     hd0 = np.array([[1 - 2*(self._fc2n - self._fc1n)]])
-    hdr = 2*self._fcn1*np.sin(nn*wc1n)/(nn*wc1n) - 2*self._fcn2*np.sin(nn*wc2n)/(nn*wc2n)
+    hdr = 2*self._fc1n*np.sin(nn*wc1n)/(nn*wc1n) - 2*self._fc2n*np.sin(nn*wc2n)/(nn*wc2n)
     hdr = np.array([hdr])
     hdl = np.flip(hdr)
     self._hd = np.concatenate((hdl, hd0, hdr), axis=1)
@@ -359,8 +423,8 @@ class BandStopFIR(FIRFilter):
     return self._b
 
   def plotFilter(self):
-    plt.stem(self._n.T, self._hd.T)
+    plt.figure(1, figsize=(20,12))
+    plt.stem(self._n.T, self._hd.T, use_line_collection=True)
     plt.xlabel("Número de coeficientes")
     plt.ylabel("Amplitude")
-    plt.title("Filtro Rejeita Faixa ideal")
-
+    plt.title("Filtro Rejeita Faixa ideal", fontweight="bold")

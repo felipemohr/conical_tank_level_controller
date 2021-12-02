@@ -1,5 +1,7 @@
 clear; close all; clc
 
+pkg load control
+
 R = 0.1325;
 h2_ = 0.5;
 H2 = 0.67;

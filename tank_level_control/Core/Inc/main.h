@@ -89,7 +89,7 @@ void Error_Handler(void);
 #define PUMP_EN_Pin GPIO_PIN_5
 #define PUMP_EN_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-#define SAMPLING_FREQUENCY 100.0f
+#define SAMPLING_FREQUENCY 10.0f
 #define LCD_UPDATE_TIME 1.0f
 /* USER CODE END Private defines */
 
