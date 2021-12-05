@@ -8,15 +8,15 @@ def getMillis():
 
 if __name__ == "__main__":
 
-  if isfile("system1.csv"):
-    remove("system1.csv")
+  if isfile("system2.csv"):
+    remove("system2.csv")
 
   ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 
-  with open("system1.csv", "a") as data_file:
+  with open("system2.csv", "a") as data_file:
     data_file.write("millis,dist_raw,dist_filtered,water_height,setpoint,pid_val\n")
     start_time = getMillis()
-    while getMillis() - start_time < 600000:
+    while getMillis() - start_time < 180000:
       data = ser.readline().decode()
       data_file.write(data)
       print(data)

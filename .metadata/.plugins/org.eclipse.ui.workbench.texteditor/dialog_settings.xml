@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="openValve"/>
+		<item key="selection" value="usensor.read"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="openValve"/>
-			<item value="setInitialValveOpening"/>
-			<item value="25"/>
-			<item value="millisTicker"/>
-			<item value="_millis"/>
-			<item value="__HAL_TIM_SET_COMPARE"/>
-			<item value="625"/>
+			<item value="usensor.read"/>
 			<item value="sendData"/>
-			<item value="pwmVal"/>
-			<item value="pumpPidController"/>
-			<item value="3N"/>
-			<item value="TIM_CHANNEL_1"/>
-			<item value="PWM"/>
-			<item value="PUMP_PWM"/>
-			<item value="PUMPPWM"/>
+			<item value="HTIM"/>
+			<item value="/="/>
+			<item value="checkError"/>
+			<item value="&#x0A;&#x09;lcd16x2_clear();&#x0A;&#x09;lcd16x2_printf(&quot;Fechando Valvula&quot;);&#x0A;&#x09;HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_RESET);&#x0A;&#x09;__HAL_TIM_SET_COMPARE(&amp;htim1,TIM_CHANNEL_1, 125);&#x0A;&#x09;HAL_Delay(closeTime);&#x0A;&#x09;__HAL_TIM_SET_COMPARE(&amp;htim1,TIM_CHANNEL_1, 0);&#x0A;"/>
+			<item value="closeValve"/>
+			<item value="CHECK_ERROR_TIME"/>
+			<item value="startLoopMillis"/>
+			<item value="fecha"/>
+			<item value="getOpeningTime"/>
+			<item value="openValve"/>
+			<item value="void openValve(uint16_t openTime)"/>
+			<item value="millis"/>
+			<item value="setInitialValveOpening"/>
 		</list>
 		<list key="replacehistory">
 			<item value="closeValve"/>
