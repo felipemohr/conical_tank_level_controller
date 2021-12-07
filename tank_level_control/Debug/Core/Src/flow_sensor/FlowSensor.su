@@ -1,0 +1,6 @@
+FlowSensor.cpp:11:6:void FIRFilterFlow_Init(FIRFilterFlow*)	24	static
+FlowSensor.cpp:20:7:float FIRFilterFlow_Update(FIRFilterFlow*, float)	32	static
+FlowSensor.cpp:44:1:FlowSensor::FlowSensor()	16	static
+FlowSensor.cpp:49:7:float FlowSensor::getFlowRaw()	16	static
+FlowSensor.cpp:54:7:float FlowSensor::getFlowFiltered()	16	static
+FlowSensor.cpp:60:6:void FlowSensor::readSensor(int)	16	static

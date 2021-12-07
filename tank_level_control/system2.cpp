@@ -87,7 +87,6 @@ bool checkError = false;
 
 float kp = 0.08;
 float error;
-float lastMeasurement;
 
 uint16_t sensorReadCont = 0;
 
@@ -171,6 +170,7 @@ int main(void)
   while (!HAL_GPIO_ReadPin(SETPOINT_BUT_GPIO_Port, SETPOINT_BUT_Pin));
   lcd16x2_clear();
 
+  lcd16x2_printf("Abrindo valvula");
   openValve(5000);
 
   lcd16x2_clear();
@@ -181,8 +181,6 @@ int main(void)
 	  //usensor.readSensor();
 	  HAL_Delay(1000/SAMPLING_FREQUENCY);
   }
-
-  lastMeasurement = usensor.getWaterHeight();
 
   startMillis = HAL_GetTick();
   __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 400);
@@ -220,8 +218,8 @@ int main(void)
 	{
 		lcd16x2_clear();
 		lcd16x2_1stLine();
-		//lcd16x2_printf("Setpoint: %.1fcm", setpoint*100);
-		//lcd16x2_2ndLine();
+		lcd16x2_printf("Setpoint: %.1fcm", setpoint*100);
+		lcd16x2_2ndLine();
 		lcd16x2_printf("H. atual: %.1fcm", usensor.getWaterHeight());
 		updateLCD = false;
 	}
@@ -685,8 +683,8 @@ void fillTank()
 void closeValve(uint16_t closeTime)
 {
 	//lcd16x2_clear();
-	lcd16x2_2ndLine();
-	lcd16x2_printf("Fechando %d", closeTime);
+	//lcd16x2_2ndLine();
+	//lcd16x2_printf("Fechando %d", closeTime);
 	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_RESET);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
 	HAL_Delay(closeTime);
@@ -696,8 +694,8 @@ void closeValve(uint16_t closeTime)
 void openValve(uint16_t openTime)
 {
 	//lcd16x2_clear();
-	lcd16x2_2ndLine();
-	lcd16x2_printf("Abrindo %d", openTime);
+	//lcd16x2_2ndLine();
+	//lcd16x2_printf("Abrindo %d", openTime);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
 	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_SET);
 	HAL_Delay(openTime);

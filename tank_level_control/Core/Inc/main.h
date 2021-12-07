@@ -64,6 +64,9 @@ void Error_Handler(void);
 #define SETPOINT_POT_GPIO_Port GPIOA
 #define SETPOINT_BUT_Pin GPIO_PIN_3
 #define SETPOINT_BUT_GPIO_Port GPIOA
+#define FLOW_SENSOR_Pin GPIO_PIN_1
+#define FLOW_SENSOR_GPIO_Port GPIOB
+#define FLOW_SENSOR_EXTI_IRQn EXTI1_IRQn
 #define TRIG_Pin GPIO_PIN_10
 #define TRIG_GPIO_Port GPIOB
 #define ECHO_Pin GPIO_PIN_11

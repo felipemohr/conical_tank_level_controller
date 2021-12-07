@@ -13,6 +13,7 @@ RM := rm -rf
 -include Core/Startup/subdir.mk
 -include Core/Src/pid_controller/subdir.mk
 -include Core/Src/height_sensor/subdir.mk
+-include Core/Src/flow_sensor/subdir.mk
 -include Core/Src/subdir.mk
 -include subdir.mk
 -include objects.mk

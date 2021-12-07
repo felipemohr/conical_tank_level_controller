@@ -30,6 +30,7 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/Src/flow_sensor \
 Core/Src/height_sensor \
 Core/Src \
 Core/Src/pid_controller \
