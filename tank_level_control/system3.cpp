@@ -148,7 +148,7 @@ int main(void)
 	  lcd16x2_clear();
 	  lcd16x2_printf("Setpoint: ");
 	  lcd16x2_2ndLine();
-	  lcd16x2_printf("         %.1f L/min", setpoint);
+	  lcd16x2_printf("     %.1f L/min", setpoint);
 	  HAL_Delay(300);
   }
 
@@ -192,7 +192,7 @@ int main(void)
 
 	startLoopMillis = HAL_GetTick();
 
-	error = setpoint - flowSensor.getFlowFiltered();
+	error = setpoint - flowSensor.getFlowFiltered() - 0.6;
 	if (error > 0.2) valveTime = 1000*kp*error;
 	else if (error < -0.2) valveTime = -1000*kp*error;
 	else valveTime = 0;
@@ -215,9 +215,9 @@ int main(void)
 	{
 		lcd16x2_clear();
 		lcd16x2_1stLine();
-		lcd16x2_printf("Setpoint: %.1f L/min", setpoint);
+		lcd16x2_printf("SP: %.1f L/min", setpoint);
 		lcd16x2_2ndLine();
-		lcd16x2_printf("V. atual: %.1f L/min", flowSensor.getFlowFiltered());
+		lcd16x2_printf("V.: %.1f L/min", flowSensor.getFlowFiltered());
 		updateLCD = false;
 	}
 
@@ -671,8 +671,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 void sendData()
 {
 	char buffer[36];
-	sprintf(buffer, "%.2f,%.2f,%.2f\n",
-					(HAL_GetTick() - startMillis)/1000.0,
+	sprintf(buffer, "%.2f,%.2f,%.2f,%.2f\n",
+					(HAL_GetTick() - startMillis)/1000.0, setpoint,
 					flowSensor.getFlowRaw(), flowSensor.getFlowFiltered());
 	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
 }

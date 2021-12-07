@@ -1,4 +1,4 @@
-14:16:16 **** Incremental Build of configuration Debug for project tank_level_control ****
+15:31:04 **** Incremental Build of configuration Debug for project tank_level_control ****
 make -j12 all 
 arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 In file included from ../Core/Src/flow_sensor/FlowSensor.h:12,
@@ -13,7 +13,7 @@ arm-none-eabi-size   tank_level_control.elf
 arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
 arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
    text	   data	    bss	    dec	    hex	filename
-  35096	    624	   2204	  37924	   9424	tank_level_control.elf
+  35160	    632	   2212	  38004	   9474	tank_level_control.elf
 Finished building: default.size.stdout
  
 Finished building: tank_level_control.bin
@@ -21,5 +21,5 @@ Finished building: tank_level_control.bin
 Finished building: tank_level_control.list
  
 
-14:16:17 Build Finished. 0 errors, 1 warnings. (took 721ms)
+15:31:05 Build Finished. 0 errors, 1 warnings. (took 721ms)
 

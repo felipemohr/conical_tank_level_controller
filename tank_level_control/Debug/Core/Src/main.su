@@ -30,7 +30,7 @@ main.cpp:539:13:void MX_USART1_UART_Init()	8	static
 main.cpp:572:13:void MX_GPIO_Init()	40	static
 main.cpp:641:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
 main.cpp:663:6:void HAL_GPIO_EXTI_Callback(uint16_t)	16	static
-main.cpp:671:6:void sendData()	80	static
+main.cpp:671:6:void sendData()	96	static
 main.cpp:680:6:void closeValve(uint16_t)	16	static
 main.cpp:691:6:void openValve(uint16_t)	16	static
 main.cpp:708:6:void Error_Handler()	4	static,ignoring_inline_asm

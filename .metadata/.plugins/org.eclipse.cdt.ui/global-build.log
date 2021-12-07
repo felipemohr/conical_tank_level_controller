@@ -266,3 +266,121 @@ Finished building: tank_level_control.bin
  
 Finished building: tank_level_control.list
  
+14:47:27 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-g++ "../Core/Src/flow_sensor/FlowSensor.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/flow_sensor/FlowSensor.d" -MT"Core/Src/flow_sensor/FlowSensor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flow_sensor/FlowSensor.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/flow_sensor/FlowSensor.h:12,
+                 from ../Core/Src/main.cpp:26:
+../Core/Inc/fir_coeffs_flow.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
+    3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
+      |              ^~~~~~~~~~
+arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: tank_level_control.elf
+ 
+arm-none-eabi-size   tank_level_control.elf 
+arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
+arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35104	    584	   2164	  37852	   93dc	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+Finished building: tank_level_control.bin
+ 
+Finished building: tank_level_control.list
+ 
+14:47:57 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35104	    584	   2164	  37852	   93dc	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+14:49:46 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35104	    584	   2164	  37852	   93dc	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+14:49:54 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35104	    584	   2164	  37852	   93dc	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+14:50:15 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-size   tank_level_control.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35104	    584	   2164	  37852	   93dc	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+15:21:25 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-g++ "../Core/Src/flow_sensor/FlowSensor.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/flow_sensor/FlowSensor.d" -MT"Core/Src/flow_sensor/FlowSensor.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/flow_sensor/FlowSensor.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/flow_sensor/FlowSensor.h:12,
+                 from ../Core/Src/main.cpp:26:
+../Core/Inc/fir_coeffs_flow.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
+    3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
+      |              ^~~~~~~~~~
+arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: tank_level_control.elf
+ 
+arm-none-eabi-size   tank_level_control.elf 
+arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
+arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35128	    632	   2212	  37972	   9454	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+Finished building: tank_level_control.bin
+ 
+Finished building: tank_level_control.list
+ 
+15:24:08 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/flow_sensor/FlowSensor.h:12,
+                 from ../Core/Src/main.cpp:26:
+../Core/Inc/fir_coeffs_flow.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
+    3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
+      |              ^~~~~~~~~~
+arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: tank_level_control.elf
+ 
+arm-none-eabi-size   tank_level_control.elf 
+arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
+arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35112	    632	   2212	  37956	   9444	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+Finished building: tank_level_control.bin
+ 
+Finished building: tank_level_control.list
+ 
+15:31:04 **** Incremental Build of configuration Debug for project tank_level_control ****
+make -j12 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m3 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/flow_sensor/FlowSensor.h:12,
+                 from ../Core/Src/main.cpp:26:
+../Core/Inc/fir_coeffs_flow.h:3:14: warning: 'FIR_COEFFS' defined but not used [-Wunused-variable]
+    3 | static float FIR_COEFFS[FILTER_NUM_COEFFS] = {
+      |              ^~~~~~~~~~
+arm-none-eabi-g++ -o "tank_level_control.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/senai/conical_tank_level_controller/tank_level_control/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="tank_level_control.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: tank_level_control.elf
+ 
+arm-none-eabi-size   tank_level_control.elf 
+arm-none-eabi-objdump -h -S  tank_level_control.elf  > "tank_level_control.list"
+arm-none-eabi-objcopy  -O binary  tank_level_control.elf  "tank_level_control.bin"
+   text	   data	    bss	    dec	    hex	filename
+  35160	    632	   2212	  38004	   9474	tank_level_control.elf
+Finished building: default.size.stdout
+ 
+Finished building: tank_level_control.bin
+ 
+Finished building: tank_level_control.list
+ 
