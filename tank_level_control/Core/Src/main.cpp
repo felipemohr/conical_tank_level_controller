@@ -23,7 +23,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "lcd16x2.c"
-#include "flow_sensor/FlowSensor.h"
+#include "height_sensor/HeightSensor.h"
+#include "pid_controller/PIDController.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,9 +52,10 @@ TIM_HandleTypeDef htim4;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-void sendData();
-void openValve(uint16_t openTime);
-void closeValve(uint16_t closeTime);
+void sendData(HeightSensor usensor);
+void closeValve();
+void fillTank();
+void openValve();
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,18 +73,12 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-FlowSensor flowSensor;
+PIDController pump_pid_controller;
 
 uint16_t potVal;
+uint16_t pwmVal;
 float setpoint;
-
-float kp = 0.00075;
-float error;
-uint16_t valveTime;
-
-uint16_t flowMillisCont = 0;
-uint16_t flowPulsesCont = 0;
-bool calculateFlow = false;
+float pidVal;
 
 uint16_t LCDMillisCont = 0;
 bool updateLCD = true;
@@ -144,18 +140,27 @@ int main(void)
   {
 	  HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
 	  potVal = HAL_ADC_GetValue(&hadc1);
-	  setpoint = 15.0 + 10.0*(potVal/4036.0);
+	  setpoint = 0.3 + 0.32*(potVal/4036.0);
 	  lcd16x2_clear();
 	  lcd16x2_printf("Setpoint: ");
 	  lcd16x2_2ndLine();
-	  lcd16x2_printf("     %.1f L/min", setpoint);
+	  lcd16x2_printf("         %.1f cm", 100*setpoint);
 	  HAL_Delay(300);
   }
+
+  HeightSensor usensor(TRIG_GPIO_Port, TRIG_Pin, ECHO_GPIO_Port, ECHO_Pin, htim2);
 
   HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_SET);
   HAL_TIM_Base_Start_IT(&htim4);
 
+  pump_pid_controller.setKPID(1.319, 0.02405, 10.785);
+  pump_pid_controller.setPIDLimits(0.0f, 1.0f);
+  pump_pid_controller.setSetpoint(setpoint);
+
   HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+
+  closeValve();
+  // if (setpoint > 0.55) fillTank();
 
   lcd16x2_clear();
   lcd16x2_printf("Okay! Pressione");
@@ -164,21 +169,18 @@ int main(void)
   while (!HAL_GPIO_ReadPin(SETPOINT_BUT_GPIO_Port, SETPOINT_BUT_Pin));
   lcd16x2_clear();
 
-  lcd16x2_printf("Abrindo valvula");
-  openValve(4500);
+  openValve();
 
   lcd16x2_clear();
   lcd16x2_2ndLine();
   lcd16x2_printf("Iniciando...");
-  for (int i=0; i<30; i++)
+  for (int i=0; i<(FILTER_NUM_COEFFS-1)/2; i++)
   {
-	  flowSensor.readSensor(0);
-	  HAL_Delay(200);
+	  usensor.readSensor();
+	  HAL_Delay(1000/SAMPLING_FREQUENCY);
   }
 
   startMillis = HAL_GetTick();
-  __HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 400);
-
 
   /* USER CODE END 2 */
 
@@ -191,36 +193,36 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 	startLoopMillis = HAL_GetTick();
+	usensor.readSensor();
 
-	error = setpoint - flowSensor.getFlowFiltered() - 0.6;
-	if (error > 0.2) valveTime = 1000*kp*error;
-	else if (error < -0.2) valveTime = -1000*kp*error;
-	else valveTime = 0;
-
-	if (valveTime > 1000) valveTime = 1000;
-	if (error > -0.5 &&  error < 0.5) valveTime /= 5;
-
-	if (error > 0.0) openValve(valveTime);
-	else closeValve(valveTime);
-
-	if (calculateFlow)
+	pidVal = pump_pid_controller.processPID(usensor.getWaterHeight()/100);
+	if (pidVal < 0.25)
 	{
-		flowSensor.readSensor(flowPulsesCont);
-		flowPulsesCont = 0;
-		calculateFlow = false;
-		sendData();
+		HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_RESET);
+		pidVal = 0.0;
 	}
+	else
+	{
+		HAL_GPIO_WritePin(PUMP_EN_GPIO_Port, PUMP_EN_Pin, GPIO_PIN_RESET);
+		pwmVal = 625*pidVal;
+	}
+
+	pwmVal = 625*pidVal;
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, pwmVal);
+
+
 
 	if (updateLCD)
 	{
 		lcd16x2_clear();
 		lcd16x2_1stLine();
-		lcd16x2_printf("SP: %.1f L/min", setpoint);
+		lcd16x2_printf("Setpoint: %.1fcm", setpoint*100);
 		lcd16x2_2ndLine();
-		lcd16x2_printf("V.: %.1f L/min", flowSensor.getFlowFiltered());
+		lcd16x2_printf("H. atual: %.1fcm", usensor.getWaterHeight());
 		updateLCD = false;
 	}
 
+	sendData(usensor);
 	HAL_Delay(1000/SAMPLING_FREQUENCY - (HAL_GetTick() - startLoopMillis));
   }
   /* USER CODE END 3 */
@@ -602,12 +604,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(SETPOINT_BUT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : FLOW_SENSOR_Pin */
-  GPIO_InitStruct.Pin = FLOW_SENSOR_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(FLOW_SENSOR_GPIO_Port, &GPIO_InitStruct);
-
   /*Configure GPIO pins : TRIG_Pin VALVE_DIR_Pin PUMP_EN_Pin */
   GPIO_InitStruct.Pin = TRIG_Pin|VALVE_DIR_Pin|PUMP_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -630,10 +626,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
-
 }
 
 /* USER CODE BEGIN 4 */
@@ -642,15 +634,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if (htim == &htim4)
 	{
-		flowMillisCont++;
-		if (flowMillisCont >= 200)
-		{
-			calculateFlow = true;
-			flowMillisCont = 0;
-		}
-
+		pump_pid_controller.millisTicker();
 		LCDMillisCont++;
-		if (LCDMillisCont >= 1000*int(LCD_UPDATE_TIME))
+		if (LCDMillisCont > 1000*int(LCD_UPDATE_TIME))
 		{
 			HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 			updateLCD = true;
@@ -660,42 +646,42 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 }
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	if (GPIO_Pin == FLOW_SENSOR_Pin)
-	{
-		flowPulsesCont++;
-	}
-}
-
-void sendData()
+void sendData(HeightSensor usensor)
 {
 	char buffer[36];
-	sprintf(buffer, "%.2f,%.2f,%.2f,%.2f\n",
-					(HAL_GetTick() - startMillis)/1000.0, setpoint,
-					flowSensor.getFlowRaw(), flowSensor.getFlowFiltered());
+	sprintf(buffer, "%.2f,%.2f,%.2f,%.2f,%.2f,%.2f\n",
+					(HAL_GetTick() - startMillis)/1000.0, usensor.getDistRaw(),
+					usensor.getDistFiltered() ,usensor.getWaterHeight(),
+					setpoint, pidVal);
 	HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
 }
 
-void closeValve(uint16_t closeTime)
+void closeValve()
 {
-	//lcd16x2_clear();
-	//lcd16x2_2ndLine();
-	//lcd16x2_printf("Fechando %d", closeTime);
+	lcd16x2_clear();
+	lcd16x2_printf("Fechando Valvula");
 	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_RESET);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
-	HAL_Delay(closeTime);
+	HAL_Delay(4500);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 0);
 }
 
-void openValve(uint16_t openTime)
+void fillTank()
 {
-	//lcd16x2_clear();
-	//lcd16x2_2ndLine();
-	//lcd16x2_printf("Abrindo %d", openTime);
+	lcd16x2_clear();
+	lcd16x2_printf("Enchendo tanque");
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 625);
+	HAL_Delay(6000);
+	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_3, 0);
+}
+
+void openValve()
+{
+	lcd16x2_clear();
+	lcd16x2_printf("Abrindo Valvula");
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 625);
 	HAL_GPIO_WritePin(VALVE_DIR_GPIO_Port, VALVE_DIR_Pin, GPIO_PIN_SET);
-	HAL_Delay(openTime);
+	HAL_Delay(1600);
 	__HAL_TIM_SET_COMPARE(&htim1,TIM_CHANNEL_1, 0);
 }
 
